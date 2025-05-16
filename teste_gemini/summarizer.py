@@ -74,7 +74,7 @@ def build_prompt(
         "external security updates or newsletters, job proposals, training reminders, or support ticket updates that did not provide information about the projects."
     )
     if prioritize_keywords:
-        prompt += f"\nPrioritize the following topics/keywords: {', '.join(prioritize_keywords)}."
+        prompt += f"\nPrioritize the following topics/keywords: {', '.join(prioritize_keywords)}, even if the body is brief or lacks detail. Prioritize subjects written in caps lock."
     if deprioritize_keywords:
         prompt += f"\nDeprioritize the following topics/keywords: {', '.join(deprioritize_keywords)}."
     if more_relevant_conversations:
@@ -110,7 +110,7 @@ def build_prompt(
 
     prompt += (
         "\nAt the end, also provide a short statistical summary in this format:\n"
-        "- Total emails: number of the last email\n"
+        f"- Total emails:{len(emails)} \n"
         "- High priority: <number>\n"
         "- Medium priority: <number>\n"
         "- Low priority: <number>\n"

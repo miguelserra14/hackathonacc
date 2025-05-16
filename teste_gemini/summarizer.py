@@ -33,53 +33,72 @@ def summarize_emails(
     for idx, email in enumerate(emails, 1):
         motivo = None
         email_str = ""
+        texto_completo = ""
         if isinstance(email, dict):
             if 'assunto' in email:
                 email_str += f"Assunto: {email['assunto']}\n"
-                if "newsletter" in email['assunto'].lower():
-                    motivo = "contém uma newsletter e é irrelevante para o resumo"
+                texto_completo += email['assunto'] + " "
             if 'remetente' in email:
                 email_str += f"Remetente: {email['remetente']}\n"
             if 'data' in email:
                 email_str += f"Data: {email['data']}\n"
             if 'corpo' in email:
                 corpo = email['corpo']
+                texto_completo += corpo
                 if "newsletter" in corpo.lower():
                     idx_news = corpo.lower().find("newsletter")
                     parte_relevante = corpo[:idx_news].strip()
                     if parte_relevante:
                         email_str += f"Corpo: {parte_relevante}\n"
-                        # Não marca como irrelevante, pois há parte relevante
                     else:
                         motivo = "contém uma newsletter e é irrelevante para o resumo"
                 else:
                     email_str += f"Corpo: {corpo}\n"
-            # Só adiciona ao prompt se houver parte relevante (Corpo: presente e não vazio)
-            if 'Corpo:' in email_str and email_str.strip().split('Corpo:')[1].strip():
+            # Novo critério: se não contém nenhuma palavra-chave relevante, marca como irrelevante
+            palavras_relevantes = (prioritize_keywords or [])
+            if palavras_relevantes and not any(p.lower() in texto_completo.lower() for p in palavras_relevantes):
+                motivo = "não contém informações relevantes sobre os tópicos prioritários"
+            if 'Corpo:' in email_str and email_str.strip().split('Corpo:')[1].strip() and not motivo:
                 prompt += f"{idx}.\n{email_str}\n"
             elif motivo:
                 irrelevantes.append((idx, motivo))
         else:
             # Assume string simples
-            if "newsletter" in email.lower():
-                idx_news = email.lower().find("newsletter")
-                parte_relevante = email[:idx_news].strip()
-                if parte_relevante:
-                    prompt += f"{idx}. {parte_relevante}\n"
-                    # Não marca como irrelevante, pois há parte relevante
-                else:
-                    motivo = "contém uma newsletter e é irrelevante para o resumo"
-                    irrelevantes.append((idx, motivo))
-            else:
+            texto_completo = email
+            motivo = None
+            parte_relevante = None
+            # Verifica se há alguma palavra despriorizada no texto
+            palavra_despriorizada = None
+            if deprioritize_keywords:
+                for palavra in deprioritize_keywords:
+                    if palavra.lower() in email.lower():
+                        palavra_despriorizada = palavra
+                        break
+            if palavra_despriorizada:
+                idx_despriorizada = email.lower().find(palavra_despriorizada.lower())
+                parte_relevante = email[:idx_despriorizada].strip()
+                if not parte_relevante:
+                    motivo = f"contém '{palavra_despriorizada}' e é irrelevante para o resumo"
+            palavras_relevantes = (prioritize_keywords or [])
+            if palavras_relevantes and not any(p.lower() in texto_completo.lower() for p in palavras_relevantes):
+                #motivo = "não contém informações relevantes sobre os tópicos prioritários"
+                continue
+            if motivo:
+                irrelevantes.append((idx, motivo))
+            elif parte_relevante:
+                prompt += f"{idx}. {parte_relevante}\n"
+            elif not palavra_despriorizada:
                 prompt += f"{idx}. {email}\n"
-
     if irrelevantes:
-        irrelevantes_str = "; ".join([f"E-mail {i} ({motivo})" for i, motivo in irrelevantes])
-        prompt += f"\nOs seguintes e-mails foram considerados irrelevantes: {irrelevantes_str}.\n"
+            irrelevantes_str = "; ".join([f"E-mail {i} ({motivo})" for i, motivo in irrelevantes])
+            print(f"\nOs seguintes e-mails foram considerados irrelevantes: {irrelevantes_str}.\n")
+        
 
     try:
         model = genai.GenerativeModel('models/gemini-1.5-flash-latest')
         response = model.generate_content(prompt)
+
+
         return response.text.strip()
     except Exception as e:
         print(f"Erro ao resumir: {e}")

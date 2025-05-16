@@ -2,6 +2,7 @@
 
 from flask import Flask, render_template, request, redirect, url_for, session, flash, jsonify
 from email_reader import fetch_emails
+import json
 
 app = Flask(__name__)
 app.secret_key = 'your_secret_key_here'
@@ -10,7 +11,7 @@ app.secret_key = 'your_secret_key_here'
 dummy_users = {
     "user@example.com": "password123",
     "admin@example.com": "admin123",
-    "admin@admin" : "admin"
+    "admin@admin": "admin"
 }
 
 @app.route('/', methods=['GET', 'POST'])
@@ -34,14 +35,13 @@ def login():
 def dashboard():
     if 'user' not in session:
         return redirect(url_for('login'))
-    
+
     user = session['user']
-    
-    # Check if email account is configured
+
     if 'email_account' not in session or not session['email_account']:
         flash('Please configure your email address first', 'warning')
         return redirect(url_for('settings'))
-    
+
     emails = fetch_emails("14-May-2025", "17-May-2025")
     unread_count = len(emails)
     session['emails_to_summarize'] = emails
@@ -53,43 +53,44 @@ def dashboard():
 def summarize():
     if 'user' not in session:
         return redirect(url_for('login'))
-    
-    # Check if email account is configured
+
     if 'email_account' not in session or not session['email_account']:
         flash('Please configure your email address first', 'warning')
         return redirect(url_for('settings'))
-        
-    # Here you would connect to Gmail/Outlook and run LLM summary on unread emails
-    theme = session.get('theme', 'light')
-    return render_template('summary.html', theme=theme)
+
+    # Simulação: carregar resumos de um ficheiro local (mock)
+    with open("FT/APP/summaries_mock.json", "r", encoding="utf-8") as f:
+        summaries = json.load(f)
+
+    session['summaries'] = summaries
+    return redirect(url_for('summaries'))
 
 @app.route('/settings', methods=['GET', 'POST'])
 def settings():
     if 'user' not in session:
         return redirect(url_for('login'))
-    
+
     if request.method == 'POST':
         email = request.form.get('emailAccount')
         password = request.form.get('emailPassword')
         language = request.form.get('language')
         auto_summarize = request.form.get('autoSummarize') == 'on'
-        
+
         if email and password:
             session['email_account'] = email
-            session['email_password'] = password  # In production, store securely
+            session['email_password'] = password
             session['language'] = language
             session['auto_summarize'] = auto_summarize
             flash('Email settings saved successfully!', 'success')
             return redirect(url_for('dashboard'))
         else:
             flash('Please enter both email address and password', 'danger')
-    
-    # Get stored email account from session or use default
+
     email_account = session.get('email_account', '')
     language = session.get('language', 'English')
     auto_summarize = session.get('auto_summarize', False)
     theme = session.get('theme', 'light')
-    
+
     return render_template('settings.html', 
                           email_account=email_account,
                           language=language,
@@ -98,7 +99,6 @@ def settings():
 
 @app.route('/set_theme')
 def set_theme():
-    """Endpoint to set theme preference in session"""
     theme = request.args.get('theme', 'light')
     session['theme'] = theme
     return jsonify({"status": "success", "theme": theme})

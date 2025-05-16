@@ -1,0 +1,35 @@
+[
+  {
+    "subject": "Reunião com cliente XPTO",
+    "summary": "Confirmar presença na reunião agendada para sexta-feira às 14h com a equipa do cliente XPTO.",
+    "topics": [
+      "reunião",
+      "cliente XPTO",
+      "confirmação"
+    ],
+    "type": "Urgente",
+    "insight": "Responder até amanhã às 12h para garantir participação da equipa comercial."
+  },
+  {
+    "subject": "Relatório financeiro Q1",
+    "summary": "O relatório do primeiro trimestre está disponível e requer revisão até ao final da semana.",
+    "topics": [
+      "finanças",
+      "relatório",
+      "Q1"
+    ],
+    "type": "Requer ação",
+    "insight": "Ler e aprovar o documento antes da reunião de diretoria na segunda-feira."
+  },
+  {
+    "subject": "Newsletter interna de abril",
+    "summary": "A edição de abril da newsletter inclui atualizações sobre eventos internos e novidades da empresa.",
+    "topics": [
+      "newsletter",
+      "eventos",
+      "atualizações"
+    ],
+    "type": "Informativo",
+    "insight": "Pode ser lida com calma — sem impacto operacional direto."
+  }
+]

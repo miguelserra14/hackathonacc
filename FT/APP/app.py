@@ -56,7 +56,15 @@ def dashboard():
             dt = datetime.strptime(date_to, "%Y-%m-%d").strftime("%d-%b-%Y")
             emails = fetch_emails(df, dt)
             unread_count = len(emails)
-            session['emails_to_summarize'] = emails
+
+            # Save emails to a temporary file
+            os.makedirs("temp", exist_ok=True)
+            temp_file_path = f"temp/{session['user']}_emails.json"
+            with open(temp_file_path, "w", encoding="utf-8") as f:
+                json.dump(emails, f, indent=2, ensure_ascii=False)
+
+            # Store the file path in the session
+            session['emails_file'] = temp_file_path
         except Exception as e:
             flash(f"Failed to fetch emails: {e}", "danger")
 
@@ -68,31 +76,41 @@ def summarize():
     if 'user' not in session:
         return redirect(url_for('login'))
 
-    if 'emails_to_summarize' not in session:
+    if 'emails_file' not in session:
         flash("No emails found for summarization.", "warning")
         return redirect(url_for('dashboard'))
 
-    emails_raw = session['emails_to_summarize']
-    emails = [
-        {"subject": e.get("Subject", ""), "body": e.get("Body", "")}
-        for e in emails_raw if e.get("Body", "").strip()
-    ]
+    # Load emails from the temporary file
+    emails_file = session['emails_file']
+    try:
+        with open(emails_file, "r", encoding="utf-8") as f:
+            emails = json.load(f)
+    except Exception as e:
+        flash(f"Failed to load emails: {e}", "danger")
+        return redirect(url_for('dashboard'))
 
     prioritize = ["project", "client", "meeting", "security", "locklinked", "cvgen", "phoenix", "chimera", "alpha", "beta"]
     deprioritize = ["newsletter", "spam", "phishing", "recruitment", "job opportunities", "external news", "lottery", "seo"]
 
+    # Call the summarizer function
     structured_summary = summarize_emails(
         emails,
         prioritize_keywords=prioritize,
         deprioritize_keywords=deprioritize
     )
 
+    if not structured_summary:
+        flash("Failed to generate summary.", "danger")
+        return redirect(url_for('dashboard'))
+
+    # Save the summary to a file
     os.makedirs("static/summaries", exist_ok=True)
     summary_path = f"static/summaries/{session['user']}.json"
     with open(summary_path, "w", encoding="utf-8") as f:
         json.dump(structured_summary, f, indent=2, ensure_ascii=False)
     session['summary_path'] = summary_path
 
+    # Pass the structured summary to the template
     return render_template('summaries.html', summaries=structured_summary)
 
 @app.route('/settings', methods=['GET', 'POST'])

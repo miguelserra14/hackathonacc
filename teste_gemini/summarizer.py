@@ -97,32 +97,37 @@ def build_prompt(
             prompt += f"Emails {', '.join(map(str, phishing))} were omitted because they were phishing attempts.  "
         if outros:
             prompt += "Other emails were omitted because they were irrelevant messages or external with little project information.\n"
+
+     # Adiciona o pedido para criar um sumário estatístico ao final do prompt
+    prompt += (
+        "\nAt the end, also provide a short statistical summary in this format:\n"
+        "- Total emails: number of the last email\n"
+        "- High priority: <number>\n"
+        "- Medium priority: <number>\n"
+        "- Low priority: <number>\n"
+        "- Irrelevant: Total emails - (High Priority + Medium Priority + Low Priority\n"
+        "- Most frequent sender/conversation: <sender>\n"
+    )
     return prompt
 
 
 def extract_email_numbers(section_title, summary):
-    pattern = rf"\*\*{section_title}:\*\*\s*(.*?)\n\s*\*\*"
+    # Busca a seção correta
+    pattern = rf"\*\*{section_title}:\*\*\s*(.*?)(?:\n\s*\n|\Z)"
     match = re.search(pattern, summary, re.DOTALL | re.IGNORECASE)
-    if not match:
-        pattern = rf"\*\*{section_title}:\*\*\s*(.*)"
-        match = re.search(pattern, summary, re.DOTALL | re.IGNORECASE)
     if not match:
         return []
     section_text = match.group(1)
-    email_nums = re.findall(r"Email ([\d, &]+):", section_text)
-    numbers = []
-    for group in email_nums:
-        for part in re.split(r"[,&]", group):
-            num = part.strip()
-            if num.isdigit():
-                numbers.append(int(num))
-    return numbers
+    # Conta linhas que começam com número ponto espaço
+    email_nums = re.findall(r"^\s*\d+\.", section_text, re.MULTILINE)
+    return email_nums
 
 def extract_summary_stats(summary, emails):
     total_emails = len(emails)
     high = len(extract_email_numbers("High Priority", summary))
     medium = len(extract_email_numbers("Medium Priority", summary))
     low = len(extract_email_numbers("Low Priority", summary))
+    # Irrelevantes: extrai números da linha final
     irrelevant_match = re.search(r"Irrelevant emails\s*\(([\d,\s]+)\)", summary, re.IGNORECASE)
     if irrelevant_match:
         irrelevant = len([n for n in re.split(r"[,\s]+", irrelevant_match.group(1)) if n.isdigit()])
@@ -136,16 +141,6 @@ def extract_summary_stats(summary, emails):
     most_common_sender = most_common_sender[0][0] if most_common_sender else "Unknown"
     return total_emails, high, medium, low, irrelevant, most_common_sender
 
-def build_info_text(total_emails, high, medium, low, irrelevant, most_common_sender):
-    return (
-        f"Summary of received emails:\n"
-        f"- Total emails: {total_emails}\n"
-        f"- High priority: {high}\n"
-        f"- Medium priority: {medium}\n"
-        f"- Low priority: {low}\n"
-        f"- Irrelevant: {irrelevant}\n"
-        f"- Most frequent sender/conversation: {most_common_sender}\n\n"
-    )
 
 def summarize_emails(
     emails,
@@ -165,9 +160,8 @@ def summarize_emails(
         model = genai.GenerativeModel('models/gemini-1.5-flash-latest')
         response = model.generate_content(prompt)
         summary = response.text.strip()
-        total_emails, high, medium, low, irrelevant, most_common_sender = extract_summary_stats(summary, emails)
-        info_text = build_info_text(total_emails, high, medium, low, irrelevant, most_common_sender)
-        return info_text + summary
+    
+        return summary
     except Exception as e:
         print(f"Error summarizing: {e}")
         return None

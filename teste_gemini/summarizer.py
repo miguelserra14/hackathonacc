@@ -11,15 +11,19 @@ def format_email_dict(email, prioritize_keywords):
     email_str = ""
     texto_completo = ""
     motivo = None
-    if 'assunto' in email:
-        email_str += f"Subject: {email['assunto']}\n"
-        texto_completo += email['assunto'] + " "
+
+    # Usa 'Subject' e 'Body' se 'assunto' e 'corpo' não existirem
+    assunto = email.get('assunto') or email.get('Subject', '')
+    corpo = email.get('corpo') or email.get('Body', '')
+
+    if assunto:
+        email_str += f"Subject: {assunto}\n"
+        texto_completo += assunto + " "
     if 'remetente' in email:
         email_str += f"From: {email['remetente']}\n"
     if 'data' in email:
         email_str += f"Date: {email['data']}\n"
-    if 'corpo' in email:
-        corpo = email['corpo']
+    if corpo:
         texto_completo += corpo
         if "newsletter" in corpo.lower():
             idx_news = corpo.lower().find("newsletter")
@@ -66,8 +70,8 @@ def build_prompt(
         "Summarize the following emails in a digestible format, using 2-3 sentences per email. "
         "Based on the content, divide the relevant emails into high, medium, and low priority. "
         "At the end, add a sentence with the numbers and causes of irrelevant emails in the following format: "
-        "Irrelevant emails (x,y,z,etc):** These emails were considered irrelevant because they were phishing messages (x,y,z), "
-        "external security updates or newsletters (a,b,b,c,d,e), job proposals (f,g), training reminders (60), or support ticket updates (76) that did not provide information about the projects."
+        "Irrelevant emails (examples:)** These emails were considered irrelevant because they were phishing messages, "
+        "external security updates or newsletters, job proposals, training reminders, or support ticket updates that did not provide information about the projects."
     )
     if prioritize_keywords:
         prompt += f"\nPrioritize the following topics/keywords: {', '.join(prioritize_keywords)}."
@@ -115,8 +119,6 @@ def build_prompt(
     )
     return prompt
 
-def remove_statistical_summary(text):
-    return re.sub(r"\*\*Statistical Summary:\*\*.*", "", text, flags=re.DOTALL).strip()
 
 def summarize_emails(
     emails,
@@ -136,7 +138,7 @@ def summarize_emails(
         model = genai.GenerativeModel('models/gemini-1.5-flash-latest')
         response = model.generate_content(prompt)
         summary = response.text.strip()
-        summary = remove_statistical_summary(summary)
+       
         return summary
     except Exception as e:
         print(f"Error summarizing: {e}")

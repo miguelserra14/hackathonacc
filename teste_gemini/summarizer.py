@@ -17,7 +17,7 @@ def summarize_emails(
     emails: lista de strings (e-mails simples) ou lista de dicionários (e-mails avançados)
     Cada dicionário pode ter campos como: assunto, remetente, data, corpo, etc.
     """
-    prompt = "Resuma os seguintes e-mails em formato digerível, em 2-3 frases por e-mail."
+    prompt = "Resume os seguintes e-mails em formato digerível, em 2-3 frases por e-mail. Com base no conteúdo, divide os mails relevantes em prioridade alta, média e baixa. No final mete uma frase com os números e as causas dos e-mails irrelevantes no seguinte formato E-mails irrelevantes (x,y,z,etc):**  Esses e-mails foram considerados irrelevantes porque eram mensagens de phishing (x,y,z), atualizações de segurança externas ou newsletters (a,b,b,c,d,e), propostas de emprego (f,g), lembretes de treinos (60), ou atualizações de tickets de suporte (76) que não forneciam informações sobre os projetos."
     if prioritize_keywords:
         prompt += f"\nPriorize os seguintes tópicos/palavras: {', '.join(prioritize_keywords)}."
     if deprioritize_keywords:
@@ -29,6 +29,9 @@ def summarize_emails(
     prompt += "\n\nE-mails:\n"
 
     irrelevantes = []
+
+    total_emails = len(emails)
+    alta, media, baixa, irrelevantes_count = 0, 0, 0, 0
 
     for idx, email in enumerate(emails, 1):
         motivo = None
@@ -81,7 +84,7 @@ def summarize_emails(
                     motivo = f"contém '{palavra_despriorizada}' e é irrelevante para o resumo"
             palavras_relevantes = (prioritize_keywords or [])
             if palavras_relevantes and not any(p.lower() in texto_completo.lower() for p in palavras_relevantes):
-                #motivo = "não contém informações relevantes sobre os tópicos prioritários"
+                motivo = "não contém informações relevantes sobre os tópicos prioritários"
                 continue
             if motivo:
                 irrelevantes.append((idx, motivo))
@@ -89,15 +92,19 @@ def summarize_emails(
                 prompt += f"{idx}. {parte_relevante}\n"
             elif not palavra_despriorizada:
                 prompt += f"{idx}. {email}\n"
+    phishing = [i for i, motivo in irrelevantes if "phishing" in motivo]
+    outros = [i for i, motivo in irrelevantes if "phishing" not in motivo]
     if irrelevantes:
-            irrelevantes_str = "; ".join([f"E-mail {i} ({motivo})" for i, motivo in irrelevantes])
-            print(f"\nOs seguintes e-mails foram considerados irrelevantes: {irrelevantes_str}.\n")
-        
+        prompt += "\n"
+        if phishing:
+            prompt += f"Os e-mails {', '.join(map(str, phishing))} foram omitidos pois eram tentativas de phishing.  "
+        if outros:
+            prompt += "Outros e-mails foram omitidos pois eram mensagens irrelevantes ou externos com pouca informação sobre os projetos.\n"
 
+    
     try:
         model = genai.GenerativeModel('models/gemini-1.5-flash-latest')
         response = model.generate_content(prompt)
-
 
         return response.text.strip()
     except Exception as e:

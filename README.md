@@ -1,26 +1,35 @@
-# hackathonacc
-ResuMail
-1. Name of the Idea:
-Resumo Rápido (ResuMail)
+# ResuMail
 
-2. Problema ou ponto de dor:
-Profissionais recebem todos os dias dezenas de e-mails longos ou documentos extensos e perdem tempo lendo tudo na íntegra.
+## Squad: ResuMate
 
-3. Quem é afetado:
-Colaboradores de empresas de médio e grande porte; executivos; equipes remotas.
+### 1. Nome da Ideia
 
-4. Por que é importante:
-Economiza tempo, aumenta produtividade e evita que informações cruciais sejam ignoradas em meio a excesso de texto.
+**ResuMail**
 
-5. Ideia inicial de como GenAI pode ajudar:
-Um bot que conecta à caixa de entrada (Gmail/Outlook), identifica e-mails não lidos e gera resumos de 2–3 frases com os principais pontos de cada mensagem.
+### 2. Qual é o problema ou ponto de dor?
 
-6. Perguntas em aberto ou possíveis direções:
+Profissionais recebem todos os dias dezenas de e-mails longos (com documentos extensos) e perdem tempo para:
 
-Quais APIs de e-mail podemos usar sem complicar a autenticação?
+* Ler conteúdos repetitivos
+* Filtrar informações relevantes
+* Manter o foco em tarefas mais estratégicas
 
-Como filtrar apenas os e-mails mais relevantes (p. ex. marcados como importantes)?
+### 3. Quem é afetado por este problema?
 
+* Colaboradores de empresas que lidam com alto volume de e-mails diariamente
 
+### 4. Por que isso é importante?
 
-faz o diagrama/plano de implementação para fazer um mvp em 4h num ackathon
+* Economiza tempo
+* Aumenta a produtividade
+* Evita que informações importantes sejam ignoradas em meio a muito texto
+
+### 5. Ideia inicial de como GenAI pode ajudar
+
+* Identificar e-mails não lidos
+* Gerar resumos de 2–3 frases com os principais pontos de cada mensagem
+
+### 6. Perguntas em aberto ou possíveis direções
+
+* Quais APIs de e-mail podemos usar sem complicar a autenticação?
+* Como filtraremos apenas os e-mails mais relevantes (por exemplo, marcados como importantes)?

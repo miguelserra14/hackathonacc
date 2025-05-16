@@ -2,11 +2,58 @@ import google.generativeai as genai
 import os
 from dotenv import load_dotenv
 import re
-from collections import Counter
 
 load_dotenv()
 api_key = os.getenv("GEMINI_API_KEY")
 genai.configure(api_key=api_key)
+
+def format_email_dict(email, prioritize_keywords):
+    email_str = ""
+    texto_completo = ""
+    motivo = None
+    if 'assunto' in email:
+        email_str += f"Subject: {email['assunto']}\n"
+        texto_completo += email['assunto'] + " "
+    if 'remetente' in email:
+        email_str += f"From: {email['remetente']}\n"
+    if 'data' in email:
+        email_str += f"Date: {email['data']}\n"
+    if 'corpo' in email:
+        corpo = email['corpo']
+        texto_completo += corpo
+        if "newsletter" in corpo.lower():
+            idx_news = corpo.lower().find("newsletter")
+            parte_relevante = corpo[:idx_news].strip()
+            if parte_relevante:
+                email_str += f"Body: {parte_relevante}\n"
+            else:
+                motivo = "contains a newsletter and is irrelevant for the summary"
+        else:
+            email_str += f"Body: {corpo}\n"
+    palavras_relevantes = (prioritize_keywords or [])
+    if palavras_relevantes and not any(p.lower() in texto_completo.lower() for p in palavras_relevantes):
+        motivo = "does not contain relevant information about the priority topics"
+    return email_str, motivo
+
+def format_email_str(email, prioritize_keywords, deprioritize_keywords):
+    texto_completo = email
+    motivo = None
+    parte_relevante = None
+    palavra_despriorizada = None
+    if deprioritize_keywords:
+        for palavra in deprioritize_keywords:
+            if palavra.lower() in email.lower():
+                palavra_despriorizada = palavra
+                break
+    if palavra_despriorizada:
+        idx_despriorizada = email.lower().find(palavra_despriorizada.lower())
+        parte_relevante = email[:idx_despriorizada].strip()
+        if not parte_relevante:
+            motivo = f"contains '{palavra_despriorizada}' and is irrelevant for the summary"
+    palavras_relevantes = (prioritize_keywords or [])
+    if palavras_relevantes and not any(p.lower() in texto_completo.lower() for p in palavras_relevantes):
+        motivo = "does not contain relevant information about the priority topics"
+    return parte_relevante, motivo, palavra_despriorizada
 
 def build_prompt(
     emails,
@@ -34,55 +81,14 @@ def build_prompt(
 
     irrelevantes = []
     for idx, email in enumerate(emails, 1):
-        motivo = None
-        email_str = ""
-        texto_completo = ""
         if isinstance(email, dict):
-            if 'assunto' in email:
-                email_str += f"Subject: {email['assunto']}\n"
-                texto_completo += email['assunto'] + " "
-            if 'remetente' in email:
-                email_str += f"From: {email['remetente']}\n"
-            if 'data' in email:
-                email_str += f"Date: {email['data']}\n"
-            if 'corpo' in email:
-                corpo = email['corpo']
-                texto_completo += corpo
-                if "newsletter" in corpo.lower():
-                    idx_news = corpo.lower().find("newsletter")
-                    parte_relevante = corpo[:idx_news].strip()
-                    if parte_relevante:
-                        email_str += f"Body: {parte_relevante}\n"
-                    else:
-                        motivo = "contains a newsletter and is irrelevant for the summary"
-                else:
-                    email_str += f"Body: {corpo}\n"
-            palavras_relevantes = (prioritize_keywords or [])
-            if palavras_relevantes and not any(p.lower() in texto_completo.lower() for p in palavras_relevantes):
-                motivo = "does not contain relevant information about the priority topics"
+            email_str, motivo = format_email_dict(email, prioritize_keywords)
             if 'Body:' in email_str and email_str.strip().split('Body:')[1].strip() and not motivo:
                 prompt += f"{idx}.\n{email_str}\n"
             elif motivo:
                 irrelevantes.append((idx, motivo))
         else:
-            texto_completo = email
-            motivo = None
-            parte_relevante = None
-            palavra_despriorizada = None
-            if deprioritize_keywords:
-                for palavra in deprioritize_keywords:
-                    if palavra.lower() in email.lower():
-                        palavra_despriorizada = palavra
-                        break
-            if palavra_despriorizada:
-                idx_despriorizada = email.lower().find(palavra_despriorizada.lower())
-                parte_relevante = email[:idx_despriorizada].strip()
-                if not parte_relevante:
-                    motivo = f"contains '{palavra_despriorizada}' and is irrelevant for the summary"
-            palavras_relevantes = (prioritize_keywords or [])
-            if palavras_relevantes and not any(p.lower() in texto_completo.lower() for p in palavras_relevantes):
-                motivo = "does not contain relevant information about the priority topics"
-                continue
+            parte_relevante, motivo, palavra_despriorizada = format_email_str(email, prioritize_keywords, deprioritize_keywords)
             if motivo:
                 irrelevantes.append((idx, motivo))
             elif parte_relevante:
@@ -98,7 +104,6 @@ def build_prompt(
         if outros:
             prompt += "Other emails were omitted because they were irrelevant messages or external with little project information.\n"
 
-     # Adiciona o pedido para criar um sumário estatístico ao final do prompt
     prompt += (
         "\nAt the end, also provide a short statistical summary in this format:\n"
         "- Total emails: number of the last email\n"
@@ -110,37 +115,8 @@ def build_prompt(
     )
     return prompt
 
-
-def extract_email_numbers(section_title, summary):
-    # Busca a seção correta
-    pattern = rf"\*\*{section_title}:\*\*\s*(.*?)(?:\n\s*\n|\Z)"
-    match = re.search(pattern, summary, re.DOTALL | re.IGNORECASE)
-    if not match:
-        return []
-    section_text = match.group(1)
-    # Conta linhas que começam com número ponto espaço
-    email_nums = re.findall(r"^\s*\d+\.", section_text, re.MULTILINE)
-    return email_nums
-
-def extract_summary_stats(summary, emails):
-    total_emails = len(emails)
-    high = len(extract_email_numbers("High Priority", summary))
-    medium = len(extract_email_numbers("Medium Priority", summary))
-    low = len(extract_email_numbers("Low Priority", summary))
-    # Irrelevantes: extrai números da linha final
-    irrelevant_match = re.search(r"Irrelevant emails\s*\(([\d,\s]+)\)", summary, re.IGNORECASE)
-    if irrelevant_match:
-        irrelevant = len([n for n in re.split(r"[,\s]+", irrelevant_match.group(1)) if n.isdigit()])
-    else:
-        irrelevant = 0
-    remetentes = []
-    for email in emails:
-        if isinstance(email, dict) and 'remetente' in email:
-            remetentes.append(email['remetente'])
-    most_common_sender = Counter(remetentes).most_common(1)
-    most_common_sender = most_common_sender[0][0] if most_common_sender else "Unknown"
-    return total_emails, high, medium, low, irrelevant, most_common_sender
-
+def remove_statistical_summary(text):
+    return re.sub(r"\*\*Statistical Summary:\*\*.*", "", text, flags=re.DOTALL).strip()
 
 def summarize_emails(
     emails,
@@ -160,7 +136,7 @@ def summarize_emails(
         model = genai.GenerativeModel('models/gemini-1.5-flash-latest')
         response = model.generate_content(prompt)
         summary = response.text.strip()
-    
+        summary = remove_statistical_summary(summary)
         return summary
     except Exception as e:
         print(f"Error summarizing: {e}")

@@ -63,7 +63,7 @@ def build_prompt(
     emails,
     prioritize_keywords=None,
     deprioritize_keywords=None,
-    more_relevant_conversations=None,
+    more_relevant_conversations="andre.simoes.soares.04@gmail.com",
     less_relevant_conversations=None
 ):
     prompt = (
@@ -74,11 +74,11 @@ def build_prompt(
         "external security updates or newsletters, job proposals, training reminders, or support ticket updates that did not provide information about the projects."
     )
     if prioritize_keywords:
-        prompt += f"\nPrioritize the following topics/keywords: {', '.join(prioritize_keywords)}, even if the body is brief or lacks detail. Prioritize subjects written in caps lock."
+        prompt += f"\nPrioritize the following topics/keywords: {', '.join(prioritize_keywords)}, even if the body is brief or lacks detail. Prioritize subjects that are written in caps lock."
     if deprioritize_keywords:
         prompt += f"\nDeprioritize the following topics/keywords: {', '.join(deprioritize_keywords)}."
     if more_relevant_conversations:
-        prompt += f"\nConsider these conversations as more relevant: {', '.join(more_relevant_conversations)}."
+        prompt += f"\nConsider these senders as more relevant and of high priority: {', '.join(more_relevant_conversations)}."
     if less_relevant_conversations:
         prompt += f"\nConsider these conversations as less relevant: {', '.join(less_relevant_conversations)}."
     prompt += "\n\nEmails:\n"

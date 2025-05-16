@@ -11,7 +11,7 @@ def load_emails_from_json(json_path):
 if __name__ == "__main__":
     # Lê os e-mails já convertidos para JSON pelo EmailToJSON.py
     emails = load_emails_from_json("../email_data/email_dataJSON.json")
-    print(f"Total emails loaded: {len(emails)}")
+   # print(f"Total emails loaded: {len(emails)}")
     # Exemplo de uso com summarize_emails
     prioritize = ["CRITICO","project", "client", "meeting", "security", "locklinked", "cvgen", "phoenix", "chimera", "alpha", "beta", "test","suspeito"]
     deprioritize = ["newsletter", "spam", "phishing", "recruitment", "job opportunities", "external news", "lottery", "seo"]

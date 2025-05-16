@@ -1,0 +1,59 @@
+--- EMAIL START ---
+Message-ID: <20250514101500.A1B2C3D4E5F6@resumemate.com>
+Date: Wed, 14 May 2025 10:15:00 +0100
+From: "Project Lead CVGen" <lead.cvgen@resumemate.com>
+To: "Tech Consultant" <resumemail@resumemate.com>, "Design Team" <design@resumemate.com>
+Subject: Initial thoughts on CVGeneration v2 UI
+X-Priority: 3 (Normal)
+
+Hi team,
+
+Following up on our earlier discussion, I've jotted down some initial thoughts for the CVGeneration v2 UI refresh.
+Key areas to consider:
+1.  Improved template navigation.
+2.  Real-time preview enhancements.
+3.  Simplified export options.
+
+Could you share your preliminary feedback by EOD Thursday?
+
+Best,
+Project Lead CVGen
+--- EMAIL END ---
+
+--- EMAIL START ---
+Message-ID: <20250514113000.F6E5D4C3B2A1@clientcorp.com>
+Date: Wed, 14 May 2025 11:30:00 +0100
+From: "Maria Costa (Client X)" <maria.costa@clientcorp.com>
+To: "Tech Consultant" <resumemail@resumemate.com>
+Subject: Pergunta sobre a proposta (Project Phoenix)
+X-Priority: 3 (Normal)
+
+Olá,
+
+Espero que esta mensagem o encontre bem.
+Tenho uma pequena dúvida sobre a secção 3.2 da proposta para o Project Phoenix que nos enviou. Poderia clarificar o cronograma para a fase de testes?
+
+Obrigada,
+Maria Costa
+Account Manager, Client X
+--- EMAIL END ---
+
+--- EMAIL START ---
+Message-ID: <20250514140000.G7H8I9J0K1L2@resumemate.com>
+Date: Wed, 14 May 2025 14:00:00 +0100
+From: "HR Department" <hr@resumemate.com>
+To: "All Employees" <all-employees@resumemate.com>
+Subject: Reminder: Company Wide Meeting Tomorrow
+X-Priority: 3 (Normal)
+
+Dear All,
+
+This is a friendly reminder about our company-wide meeting scheduled for tomorrow, May 15th, at 10:00 AM in the main conference room.
+Agenda: Q2 Review and Q3 Outlook.
+
+Please be on time. Remote employees will receive a separate link for a video call.
+
+Regards,
+HR Department
+Resumemate
+--- EMAIL END ---

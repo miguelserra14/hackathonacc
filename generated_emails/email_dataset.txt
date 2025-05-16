@@ -1,0 +1,1632 @@
+--- EMAIL START ---
+Message-ID: <20250514101500.A1B2C3D4E5F6@resumemate.com>
+Date: Wed, 14 May 2025 10:15:00 +0100
+From: "Project Lead CVGen" <lead.cvgen@resumemate.com>
+To: "Tech Consultant" <resumemail@resumemate.com>, "Design Team" <design@resumemate.com>
+Subject: Initial thoughts on CVGeneration v2 UI
+X-Priority: 3 (Normal)
+
+Hi team,
+
+Following up on our earlier discussion, I've jotted down some initial thoughts for the CVGeneration v2 UI refresh.
+Key areas to consider:
+1.  Improved template navigation.
+2.  Real-time preview enhancements.
+3.  Simplified export options.
+
+Could you share your preliminary feedback by EOD Thursday?
+
+Best,
+Project Lead CVGen
+--- EMAIL END ---
+
+--- EMAIL START ---
+Message-ID: <20250514113000.F6E5D4C3B2A1@clientcorp.com>
+Date: Wed, 14 May 2025 11:30:00 +0100
+From: "Maria Costa (Client X)" <maria.costa@clientcorp.com>
+To: "Tech Consultant" <resumemail@resumemate.com>
+Subject: Pergunta sobre a proposta (Project Phoenix)
+X-Priority: 3 (Normal)
+
+Olá,
+
+Espero que esta mensagem o encontre bem.
+Tenho uma pequena dúvida sobre a secção 3.2 da proposta para o Project Phoenix que nos enviou. Poderia clarificar o cronograma para a fase de testes?
+
+Obrigada,
+Maria Costa
+Account Manager, Client X
+--- EMAIL END ---
+
+--- EMAIL START ---
+Message-ID: <20250514140000.G7H8I9J0K1L2@resumemate.com>
+Date: Wed, 14 May 2025 14:00:00 +0100
+From: "HR Department" <hr@resumemate.com>
+To: "All Employees" <all-employees@resumemate.com>
+Subject: Reminder: Company Wide Meeting Tomorrow
+X-Priority: 3 (Normal)
+
+Dear All,
+
+This is a friendly reminder about our company-wide meeting scheduled for tomorrow, May 15th, at 10:00 AM in the main conference room.
+Agenda: Q2 Review and Q3 Outlook.
+
+Please be on time. Remote employees will receive a separate link for a video call.
+
+Regards,
+HR Department
+Resumemate
+--- EMAIL END ---
+
+--- EMAIL START ---
+Message-ID: <20250514163000.M3N4O5P6Q7R8@external-vendor.com>
+Date: Wed, 14 May 2025 16:30:00 +0100
+From: "Support Team" <support@external-vendor.com>
+To: "Tech Consultant" <resumemail@resumemate.com>
+Subject: Regarding your support ticket #TICK-2025-7892
+X-Priority: 3 (Normal)
+
+Dear Valued Customer,
+
+This email is to confirm that we have received your support ticket #TICK-2025-7892 regarding the API integration issue.
+Our technical team is currently investigating the matter and we aim to provide you with an update within the next 24-48 business hours.
+
+Thank you for your patience.
+
+Sincerely,
+Vendor Support Team
+--- EMAIL END ---
+
+--- EMAIL START ---
+Message-ID: <20250514170000.S9T0U1V2W3X4@resumemate.com>
+Date: Wed, 14 May 2025 17:00:00 +0100
+From: "Security Team Lead" <sec.lead@resumemate.com>
+To: "Locklinked Dev Team" <dev.locklinked@resumemate.com>, "Tech Consultant" <resumemail@resumemate.com>
+Subject: Potential vulnerability in Locklinked auth module
+X-Priority: 2 (High)
+
+Team,
+
+Our automated scans have flagged a potential medium-severity vulnerability in the Locklinked authentication module (version 1.1.5).
+Details are attached in the secure report.
+Please review this urgently and report back on mitigation plans by tomorrow morning. I've cc'd our consultant for awareness as they might be involved in the review.
+
+Regards,
+Security Lead
+--- EMAIL END ---
+
+--- EMAIL START ---
+Message-ID: <20250515180500.Y5Z6A7B8C9D0@techworldnews.com>
+Date: Thu, 15 May 2025 18:05:00 +0100
+From: "Tech World News" <newsletter@techworldnews.com>
+To: "Subscriber" <resumemail@resumemate.com>
+Subject: Evening Edition: AI Breakthroughs & Market Shifts
+X-Priority: 4 (Low)
+
+Tech World News - Evening Edition
+
+In Today's News:
+* Major AI company announces new language model with unprecedented capabilities.
+* Stock market reacts to new semiconductor export regulations.
+* Interview with a leading futurist on the next decade of technology.
+
+Read more: [link to website - non-functional]
+
+Unsubscribe: [link - non-functional]
+--- EMAIL END ---
+
+--- EMAIL START ---
+Message-ID: <20250515181500.E1F2G3H4I5J6@resumemate.com>
+Date: Thu, 15 May 2025 18:15:00 +0100
+From: "Ana Pinto (Design)" <ana.pinto@resumemate.com>
+To: "Project Lead CVGen" <lead.cvgen@resumemate.com>, "Tech Consultant" <resumemail@resumemate.com>
+Cc: "Design Team" <design@resumemate.com>
+Subject: Re: Initial thoughts on CVGeneration v2 UI
+In-Reply-To: <20250514101500.A1B2C3D4E5F6@resumemate.com>
+References: <20250514101500.A1B2C3D4E5F6@resumemate.com>
+X-Priority: 3 (Normal)
+
+Hi Project Lead, Tech Consultant,
+
+Thanks for sharing your thoughts. The design team has reviewed them.
+We agree on the need for better template navigation and are already exploring some concepts.
+For real-time preview, we have a few ideas to improve performance and accuracy.
+Simplified export options also make sense. Perhaps a user-configurable default?
+
+We can discuss this in more detail during our sync tomorrow if that works.
+
+Best,
+Ana Pinto
+Senior Designer
+--- EMAIL END ---
+
+--- EMAIL START ---
+Message-ID: <20250515182500.K7L8M9N0O1P2@resumemate.com>
+Date: Thu, 15 May 2025 18:25:00 +0100
+From: "IT Support" <it-support@resumemate.com>
+To: "All Staff Lisbon" <lisbon-staff@resumemate.com>
+Subject: PLANNED Maintenance: Lisbon Office Network - Tonight 2AM
+X-Priority: 2 (High)
+
+Dear Lisbon Office Staff,
+
+Please be advised that there will be a planned network maintenance window for the Lisbon office tonight.
+Date: Friday, May 16th, 2025 (early morning)
+Time: 02:00 AM - 04:00 AM WEST
+Impact: Intermittent loss of network and internet connectivity.
+
+Please ensure you save all your work before this period.
+We apologize for any inconvenience caused.
+
+Regards,
+IT Support Team
+Resumemate
+--- EMAIL END ---
+
+--- EMAIL START ---
+Message-ID: <20250515183500.Q3R4S5T6U7V8@dodgydomain.info>
+Date: Thu, 15 May 2025 18:35:00 +0100
+From: "Urgent Notification Service" <no-reply@dodgydomain.info>
+To: <resumemail@resumemate.com>
+Subject: URGENT: Your Account Requires Immediate Verification!
+X-Priority: 1 (Highest)
+
+Dear Valued User,
+
+We have detected suspicious activity on your account. For your security, access has been temporarily limited.
+You must verify your account details immediately to restore full access and prevent permanent suspension.
+
+Click here to verify: [malicious link - http://dodgydomain.info/verify-account-resumemate-id78234]
+
+Failure to verify within 24 hours will result in account closure.
+
+Sincerely,
+Security Team
+(This is a phishing attempt)
+--- EMAIL END ---
+
+--- EMAIL START ---
+Message-ID: <20250515184500.W9X0Y1Z2A3B4@resumemate.com>
+Date: Thu, 15 May 2025 18:45:00 +0100
+From: "Carlos Silva (Locklinked Dev)" <carlos.silva@resumemate.com>
+To: "Security Team Lead" <sec.lead@resumemate.com>, "Tech Consultant" <resumemail@resumemate.com>
+Cc: "Locklinked Dev Team" <dev.locklinked@resumemate.com>
+Subject: Re: Potential vulnerability in Locklinked auth module
+In-Reply-To: <20250514170000.S9T0U1V2W3X4@resumemate.com>
+References: <20250514170000.S9T0U1V2W3X4@resumemate.com>
+X-Priority: 2 (High)
+
+Hi Security Lead, Tech Consultant,
+
+Thanks for the heads-up. We've reviewed the report.
+The flagged issue seems to be related to an older library version we are using for token validation.
+We are prioritizing this and aim to patch it tonight. We'll deploy to staging first for verification.
+Tech Consultant, could you be available for a quick review of the fix once it's on staging, perhaps around 10 PM?
+
+Best,
+Carlos Silva
+Locklinked Development
+--- EMAIL END ---
+
+--- EMAIL START ---
+Message-ID: <20250515190000.C5D6E7F8G9H0@personalfriend.com>
+Date: Thu, 15 May 2025 19:00:00 +0100
+From: "Sofia Moreira" <sofia.m@personalfriend.com>
+To: "Tech Consultant" <resumemail@resumemate.com>
+Subject: Jantar no Sábado?
+X-Priority: 3 (Normal)
+
+Olá!
+
+Tudo bem?
+Estava a pensar se querias ir jantar no Sábado? Podíamos experimentar aquele restaurante novo italiano de que falámos.
+Diz-me se te dá jeito!
+
+Beijinhos,
+Sofia
+--- EMAIL END ---
+
+--- EMAIL START ---
+Message-ID: <20250515191500.I1J2K3L4M5N6@resumemate.com>
+Date: Thu, 15 May 2025 19:15:00 +0100
+From: "Tech Consultant" <resumemail@resumemate.com>
+To: "Maria Costa (Client X)" <maria.costa@clientcorp.com>
+Subject: Re: Pergunta sobre a proposta (Project Phoenix)
+In-Reply-To: <20250514113000.F6E5D4C3B2A1@clientcorp.com>
+References: <20250514113000.F6E5D4C3B2A1@clientcorp.com>
+X-Priority: 3 (Normal)
+
+Olá Maria,
+
+Obrigado pelo seu email.
+Relativamente à sua questão sobre a secção 3.2 da proposta Project Phoenix, a fase de testes está planeada para durar 3 semanas, começando na semana 24, após a conclusão da fase de desenvolvimento principal. Esta fase incluirá testes unitários, de integração e de aceitação do utilizador.
+Posso fornecer um breakdown mais detalhado se necessário.
+
+Melhores cumprimentos,
+[Your Name/Signature]
+Tech Consultant, Resumemate
+(This is a sent item, but for testing inbox, we assume it's a reply received by the consultant, perhaps a BCC or a rule moving sent items to inbox for tracking)
+--- EMAIL END ---
+
+--- EMAIL START ---
+Message-ID: <20250515193000.O7P8Q9R0S1T2@cybersec-digest.org>
+Date: Thu, 15 May 2025 19:30:00 +0100
+From: "CyberSecurity Digest" <updates@cybersec-digest.org>
+To: <resumemail@resumemate.com>
+Subject: Weekly Threat Report: New Ransomware Strain "DataLock"
+X-Priority: 3 (Normal)
+
+CyberSecurity Digest - Weekly Report
+
+This week's key threats:
+* **New Ransomware "DataLock":** Actively targeting SMBs through phishing emails. IOCs available on our portal.
+* **Zero-Day Exploit:** A popular web server software has a critical vulnerability. Patch immediately.
+* **Phishing Trends:** Increased sophistication in CEO fraud attempts.
+
+Stay vigilant and ensure your systems are updated.
+Full report: [link - non-functional]
+--- EMAIL END ---
+
+--- EMAIL START ---
+Message-ID: <20250515194500.U3V4W5X6Y7Z8@resumemate.com>
+Date: Thu, 15 May 2025 19:45:00 +0100
+From: "CVGen Automated Build System" <builds.cvgen@resumemate.com>
+To: "CVGen Dev Team" <dev.cvgen@resumemate.com>, "Tech Consultant" <resumemail@resumemate.com>
+Subject: Build Failed: CVGeneration - branch 'feature-newtemplate'
+X-Priority: 2 (High)
+
+Build Number: #1773
+Project: CVGeneration
+Branch: feature-newtemplate
+Status: FAILED
+
+Error: Compilation error in module PDFExporter.java.
+See build log for details: [link to internal build server - non-functional]
+
+This build was triggered by a commit from 'dev.user3@resumemate.com'.
+--- EMAIL END ---
+
+--- EMAIL START ---
+Message-ID: <20250515200000.A9B0C1D2E3F4@luckystar-lotto.com>
+Date: Thu, 15 May 2025 20:00:00 +0100
+From: "Lucky Star Lotto" <winner@luckystar-lotto.com>
+To: <resumemail@resumemate.com>
+Subject: Congratulations! You've Won $1,000,000!
+X-Priority: 3 (Normal)
+
+Dear Lucky Winner,
+
+We are thrilled to inform you that your email address was selected in our monthly online draw!
+You have won the grand prize of $1,000,000 USD!
+
+To claim your prize, please reply to this email with your full name, address, and a copy of your ID.
+Claim code: LS2025WINNERXYZ
+
+Congratulations once again!
+The Lucky Star Lotto Team
+(This is a spam email)
+--- EMAIL END ---
+
+--- EMAIL START ---
+Message-ID: <20250515201500.G5H6I7J8K9L0@resumemate.com>
+Date: Thu, 15 May 2025 20:15:00 +0100
+From: "Javier Peña (Locklinked QA)" <javier.pena@resumemate.com>
+To: "Locklinked Dev Team" <dev.locklinked@resumemate.com>, "Tech Consultant" <resumemail@resumemate.com>
+Subject: Feedback sobre la nueva UI de Locklinked (Staging)
+X-Priority: 3 (Normal)
+
+Hola equipo,
+
+He estado probando la nueva interfaz de usuario de Locklinked en el entorno de staging. En general, ¡se ve muy bien!
+Algunos puntos:
+1.  La navegación es mucho más intuitiva.
+2.  He encontrado un pequeño problema de alineación en la página de perfil en Firefox. Adjunto captura de pantalla.
+3.  ¿Consideramos añadir un modo oscuro?
+
+Buen trabajo,
+Javier Peña
+QA Locklinked
+--- EMAIL END ---
+
+--- EMAIL START ---
+Message-ID: <20250515203000.M1N2O3P4Q5R6@ai-innovators-weekly.com>
+Date: Thu, 15 May 2025 20:30:00 +0100
+From: "AI Innovators Weekly" <newsletter@ai-innovators-weekly.com>
+To: <resumemail@resumemate.com>
+Subject: This Week in AI: Ethical Frameworks and Generative Art
+X-Priority: 4 (Low)
+
+AI Innovators Weekly
+
+Highlights:
+* Debate intensifies around ethical AI frameworks for autonomous systems.
+* New generative art tools are empowering creators like never before.
+* Investment in AI startups continues to soar in Q2.
+
+Read more: [link - non-functional]
+--- EMAIL END ---
+
+--- EMAIL START ---
+Message-ID: <20250515204500.S7T8U9V0W1X2@resumemate.com>
+Date: Thu, 15 May 2025 20:45:00 +0100
+From: "HR Department" <hr@resumemate.com>
+To: "All Employees" <all-employees@resumemate.com>
+Subject: Internal Newsletter - May Edition
+X-Priority: 3 (Normal)
+
+Resumemate Connect - May 2025
+
+Hello Team,
+
+Welcome to this month's edition of Resumemate Connect!
+
+In this issue:
+* CEO's Message: Celebrating Our Recent Successes
+* Project Spotlight: CVGeneration v2 Nears Completion
+* Employee of the Month: Congratulations to [Employee Name]!
+* Upcoming Events: Summer BBQ and Tech Talk Series
+
+Read the full newsletter on the intranet: [link - non-functional]
+
+Best,
+HR Department
+--- EMAIL END ---
+
+--- EMAIL START ---
+Message-ID: <20250515210000.Y3Z4A5B6C7D8@personal-contact.es>
+Date: Thu, 15 May 2025 21:00:00 +0100
+From: "Luis Rodriguez" <luis.r@personal-contact.es>
+To: "Tech Consultant" <resumemail@resumemate.com>
+Subject: ¿Qué tal todo? Un café la próxima semana?
+X-Priority: 3 (Normal)
+
+Hola,
+
+¿Cómo va todo por Lisboa? Hace tiempo que no hablamos.
+Me preguntaba si te apetecería tomar un café la próxima semana para ponernos al día. Estaré por tu zona el martes o miércoles.
+Avísame si te viene bien.
+
+Un abrazo,
+Luis
+--- EMAIL END ---
+
+--- EMAIL START ---
+Message-ID: <20250515211500.E9F0G1H2I3J4@resumemate.com>
+Date: Thu, 15 May 2025 21:15:00 +0100
+From: "Project Manager (Client Alpha)" <pm.alpha@client-alpha.com>
+To: "Tech Consultant" <resumemail@resumemate.com>
+Subject: URGENT: Issue with Alpha Portal Login
+X-Priority: 1 (Highest)
+
+Hi,
+
+We are experiencing a critical issue with the Alpha Portal. Users are unable to log in since approximately 20:30 WEST.
+This is impacting our operations significantly.
+Can you please investigate this as a top priority and provide an update ASAP?
+
+Thanks,
+Project Manager
+Client Alpha
+--- EMAIL END ---
+
+--- EMAIL START ---
+Message-ID: <20250515213000.K5L6M7N8O9P0@resumemate.com>
+Date: Thu, 15 May 2025 21:30:00 +0100
+From: "CVGen Dev Team Member" <dev.user1.cvgen@resumemate.com>
+To: "Tech Consultant" <resumemail@resumemate.com>
+Subject: Query: CVGeneration PDF library options
+X-Priority: 3 (Normal)
+
+Hi,
+
+I'm working on the PDF export module for CVGeneration and encountering some limitations with the current library for complex layouts.
+Do you have any recommendations for alternative Java PDF libraries that offer more flexibility, particularly with CSS-like styling or absolute positioning?
+Any pointers would be greatly appreciated.
+
+Thanks,
+Dev Team Member, CVGeneration
+--- EMAIL END ---
+
+--- EMAIL START ---
+Message-ID: <20250515214500.Q1R2S3T4U5V6@cloudservice-provider.com>
+Date: Thu, 15 May 2025 21:45:00 +0100
+From: "Cloud Service Billing" <billing@cloudservice-provider.com>
+To: <resumemail@resumemate.com>
+Subject: Your Monthly Invoice #INV-CS-202505-001 is Ready
+X-Priority: 3 (Normal)
+
+Dear Customer,
+
+Your invoice for cloud services for the period May 2025 is now available.
+Invoice Number: INV-CS-202505-001
+Amount Due: $XXX.XX
+Due Date: June 10, 2025
+
+Please log in to your portal to view and pay your invoice: [link to portal - non-functional]
+If you have any questions, please contact our support.
+
+Thank you,
+Cloud Service Provider Billing
+(This could be legitimate or a phishing attempt if the links/details were off)
+--- EMAIL END ---
+
+--- EMAIL START ---
+Message-ID: <20250515220000.W7X8Y9Z0A1B2@resumemate.com>
+Date: Thu, 15 May 2025 22:00:00 +0100
+From: "Tech Consultant" <resumemail@resumemate.com>
+To: "Carlos Silva (Locklinked Dev)" <carlos.silva@resumemate.com>
+Cc: "Security Team Lead" <sec.lead@resumemate.com>, "Locklinked Dev Team" <dev.locklinked@resumemate.com>
+Subject: Re: Potential vulnerability in Locklinked auth module
+In-Reply-To: <20250515184500.W9X0Y1Z2A3B4@resumemate.com>
+References: <20250514170000.S9T0U1V2W3X4@resumemate.com> <20250515184500.W9X0Y1Z2A3B4@resumemate.com>
+X-Priority: 2 (High)
+
+Hi Carlos,
+
+Yes, I can be available around 10 PM tonight for the review on staging. Send me the link when it's ready.
+Good job on the quick turnaround.
+
+Best,
+[Your Name/Signature]
+Tech Consultant
+(Again, a sent item for context, or a self-CC)
+--- EMAIL END ---
+
+--- EMAIL START ---
+Message-ID: <20250515221500.C3D4E5F6G7H8@marketing-dept.com>
+Date: Thu, 15 May 2025 22:15:00 +0100
+From: "Sarah (Marketing)" <sarah.m@marketing-dept.com>
+To: "Tech Consultant" <resumemail@resumemate.com>
+Subject: Quick question about Locklinked API for campaign
+X-Priority: 3 (Normal)
+
+Hi,
+
+Hope you're having a good evening.
+The marketing team is planning a new campaign and we were wondering if there's a way to pull some anonymized usage statistics from Locklinked via an API (e.g., number of active users, popular features).
+Could you let me know if this is feasible and who we should talk to on the Locklinked team?
+
+Thanks a bunch!
+Sarah
+Marketing Team
+--- EMAIL END ---
+
+--- EMAIL START ---
+Message-ID: <20250515223000.I9J0K1L2M3N4@resumemate.com>
+Date: Thu, 15 May 2025 22:30:00 +0100
+From: "Security Alerts" <security-alerts@resumemate.com>
+To: "All Employees" <all-employees@resumemate.com>
+Subject: Security Advisory: Increase in Spear Phishing Attempts
+X-Priority: 2 (High)
+
+SECURITY ADVISORY
+
+Dear Resumemate Employees,
+
+We have observed an increase in sophisticated spear-phishing attempts targeting employees in our industry. These emails may appear to be from trusted colleagues or legitimate services.
+
+Key things to watch out for:
+* Urgent requests for sensitive information or fund transfers.
+* Unexpected attachments or links, even if they seem relevant.
+* Slight variations in sender email addresses.
+
+If you receive a suspicious email, DO NOT click any links, open attachments, or reply. Report it immediately to the IT Security team by forwarding the email to [security-incident-reporting@resumemate.com].
+
+Stay vigilant.
+Resumemate Security Team
+--- EMAIL END ---
+
+--- EMAIL START ---
+Message-ID: <20250515224500.O5P6Q7R8S9T0@conference-organizers.org>
+Date: Thu, 15 May 2025 22:45:00 +0100
+From: "DevConf Global" <info@devconfglobal.org>
+To: <resumemail@resumemate.com>
+Subject: Reminder: Call for Papers - DevConf Global 2025 Closes Soon!
+X-Priority: 4 (Low)
+
+Dear Developer,
+
+Just a friendly reminder that the Call for Papers for DevConf Global 2025 is closing on May 30th, 2025.
+This is your chance to share your expertise with a global audience of developers, engineers, and tech leaders.
+We are looking for talks on:
+* Cloud Native Architectures
+* AI and Machine Learning
+* DevOps and Automation
+* Web & Mobile Development
+* Cybersecurity
+
+Submit your proposal here: [link - non-functional]
+
+We look forward to your submissions!
+The DevConf Global Team
+--- EMAIL END ---
+
+--- EMAIL START ---
+Message-ID: <20250515230000.U1V2W3X4Y5Z6@fakepaymentservice.net>
+Date: Thu, 15 May 2025 23:00:00 +0100
+From: "OnlinePay Service" <secure-update@fakepaymentservice.net>
+To: <resumemail@resumemate.com>
+Subject: Action Required: Update Your Billing Information
+X-Priority: 1 (Highest)
+
+Dear Customer,
+
+We were unable to process your recent payment. This may be due to outdated billing information.
+To avoid interruption of your services, please update your payment details immediately.
+
+Update here: [malicious link - http://fakepaymentservice.net/update-billing-secure-id9912]
+
+If this is not updated within 48 hours, your account may be suspended.
+
+Thank you,
+OnlinePay Customer Support
+(This is a phishing attempt)
+--- EMAIL END ---
+
+--- EMAIL START ---
+Message-ID: <20250515231500.A7B8C9D0E1F2@resumemate.com>
+Date: Thu, 15 May 2025 23:15:00 +0100
+From: "Carlos Silva (Locklinked Dev)" <carlos.silva@resumemate.com>
+To: "Tech Consultant" <resumemail@resumemate.com>
+Cc: "Security Team Lead" <sec.lead@resumemate.com>, "Locklinked Dev Team" <dev.locklinked@resumemate.com>
+Subject: Re: Potential vulnerability in Locklinked auth module - Staging Ready
+In-Reply-To: <20250515220000.W7X8Y9Z0A1B2@resumemate.com>
+References: <20250514170000.S9T0U1V2W3X4@resumemate.com> <20250515184500.W9X0Y1Z2A3B4@resumemate.com> <20250515220000.W7X8Y9Z0A1B2@resumemate.com>
+X-Priority: 2 (High)
+
+Hi Tech Consultant,
+
+The patch for the Locklinked auth module is now deployed to staging.
+Staging URL: [link to internal staging - non-functional]
+Test credentials (if needed): testuser / testpass
+
+Please let us know your findings.
+
+Thanks,
+Carlos
+--- EMAIL END ---
+
+--- EMAIL START ---
+Message-ID: <20250515233000.G3H4I5J6K7L8@resumemate.com>
+Date: Thu, 15 May 2025 23:30:00 +0100
+From: "Project Lead CVGen" <lead.cvgen@resumemate.com>
+To: "CVGen Dev Team" <dev.cvgen@resumemate.com>, "Tech Consultant" <resumemail@resumemate.com>
+Subject: CVGeneration - Sprint Review & Planning Next Week
+X-Priority: 3 (Normal)
+
+Hi Team,
+
+A reminder that our CVGeneration Sprint Review for Sprint 7 is scheduled for Monday, May 19th at 11:00 AM.
+This will be followed by Sprint 8 Planning at 2:00 PM.
+Please come prepared to discuss progress, demos, and plan for the next iteration.
+Meeting invites have been sent. Tech Consultant, your input during planning will be valuable.
+
+Best,
+Project Lead CVGen
+--- EMAIL END ---
+
+--- EMAIL START ---
+Message-ID: <20250515234500.M9N0O1P2Q3R4@external-recruiter.com>
+Date: Thu, 15 May 2025 23:45:00 +0100
+From: "David Miller - Tech Recruiters Inc." <david.miller@techrecruitersinc.com>
+To: <resumemail@resumemate.com>
+Subject: Exciting Opportunity: Senior Cloud Architect
+X-Priority: 3 (Normal)
+
+Dear [Consultant's Name, if known, otherwise generic],
+
+I came across your profile and was very impressed with your experience in [mention a relevant skill if possible, otherwise generic tech skills].
+We are currently recruiting for a Senior Cloud Architect role with a leading FinTech company in London (hybrid model). The compensation package is highly competitive.
+Would you be open to a confidential chat about this opportunity?
+
+Best regards,
+David Miller
+Senior Recruiter
+Tech Recruiters Inc.
+--- EMAIL END ---
+
+--- EMAIL START ---
+Message-ID: <20250516000000.S5T6U7V8W9X0@resumemate.com>
+Date: Fri, 16 May 2025 00:00:00 +0100
+From: "Tech Consultant" <resumemail@resumemate.com>
+To: "Carlos Silva (Locklinked Dev)" <carlos.silva@resumemate.com>
+Cc: "Security Team Lead" <sec.lead@resumemate.com>, "Locklinked Dev Team" <dev.locklinked@resumemate.com>
+Subject: Re: Potential vulnerability in Locklinked auth module - Staging Ready
+In-Reply-To: <20250515231500.A7B8C9D0E1F2@resumemate.com>
+References: <20250514170000.S9T0U1V2W3X4@resumemate.com> <20250515184500.W9X0Y1Z2A3B4@resumemate.com> <20250515220000.W7X8Y9Z0A1B2@resumemate.com> <20250515231500.A7B8C9D0E1F2@resumemate.com>
+X-Priority: 2 (High)
+
+Hi Carlos,
+
+Just finished reviewing the patch on staging.
+The vulnerability appears to be resolved. Token validation is now stricter, and the previous exploit vector is closed.
+I've run a few test cases, including those that triggered the issue before, and all pass.
+Good to go for production deployment from my perspective.
+
+Excellent work!
+Best,
+[Your Name/Signature]
+Tech Consultant
+(Sent item)
+--- EMAIL END ---
+
+--- EMAIL START ---
+Message-ID: <20250516001500.Y1Z2A3B4C5D6@unsolicited-marketing.biz>
+Date: Fri, 16 May 2025 00:15:00 +0100
+From: "Best SEO Services" <info@unsolicited-marketing.biz>
+To: <resumemail@resumemate.com>
+Subject: Skyrocket Your Website Traffic NOW!
+X-Priority: 5 (Lowest)
+
+Dear Business Owner,
+
+Are you struggling to get noticed online?
+Our PROVEN SEO strategies can get your website to the #1 spot on Google!
+Guaranteed results or your money back!
+Visit our website for a FREE consultation: [spam link - http://unsolicited-marketing.biz/seo-offer]
+
+Don't miss out!
+The SEO Gurus
+(This is a spam email)
+--- EMAIL END ---
+
+--- EMAIL START ---
+Message-ID: <20250516003000.E7F8G9H0I1J2@resumemate.com>
+Date: Fri, 16 May 2025 00:30:00 +0100
+From: "Night Shift IT Operator" <it.operator.night@resumemate.com>
+To: "Tech Consultant" <resumemail@resumemate.com>
+Subject: Fwd: URGENT: Issue with Alpha Portal Login
+In-Reply-To: <20250515211500.E9F0G1H2I3J4@resumemate.com>
+References: <20250515211500.E9F0G1H2I3J4@resumemate.com>
+X-Priority: 1 (Highest)
+
+Hi Tech Consultant,
+
+Forwarding this as it seems critical and you might be the primary contact for Client Alpha issues.
+The client reported this about 3 hours ago. Any updates or can you take a look?
+The on-call L1 support couldn't identify the root cause.
+
+Thanks,
+Night Shift IT Operations
+--- EMAIL END ---
+
+--- EMAIL START ---
+Message-ID: <20250516004500.K3L4M5N6O7P8@resumemate.com>
+Date: Fri, 16 May 2025 00:45:00 +0100
+From: "Automated System Monitor" <monitor@resumemate.com>
+To: "IT Alerts" <it-alerts@resumemate.com>, "Tech Consultant" <resumemail@resumemate.com>
+Subject: WARNING: High CPU Usage on Server CVGEN-PROD-01
+X-Priority: 2 (High)
+
+System Alert:
+
+Server: CVGEN-PROD-01
+Metric: CPU Utilization
+Current Value: 95%
+Threshold: 90%
+Duration: 15 minutes
+
+This server is part of the CVGeneration production cluster. Please investigate.
+--- EMAIL END ---
+
+--- EMAIL START ---
+Message-ID: <20250516010000.Q9R0S1T2U3V4@tech-events-weekly.com>
+Date: Fri, 16 May 2025 01:00:00 +0100
+From: "Tech Events Weekly" <newsletter@tech-events-weekly.com>
+To: <resumemail@resumemate.com>
+Subject: Don't Miss These Upcoming Tech Webinars & Conferences!
+X-Priority: 4 (Low)
+
+Tech Events Weekly
+
+Hot Events This Month:
+* Webinar: "The Future of Serverless" - May 20th
+* Virtual Summit: "Data Science & AI Connect" - May 22-23rd
+* Conference: "Open Source Days Europe" - May 28-30th (Berlin & Online)
+
+Register now for early bird discounts!
+Details & Registration: [link - non-functional]
+--- EMAIL END ---
+
+--- EMAIL START ---
+Message-ID: <20250516011500.W5X6Y7Z8A9B0@resumemate.com>
+Date: Fri, 16 May 2025 01:15:00 +0100
+From: "Tech Consultant" <resumemail@resumemate.com>
+To: "Night Shift IT Operator" <it.operator.night@resumemate.com>, "Project Manager (Client Alpha)" <pm.alpha@client-alpha.com>
+Subject: Re: URGENT: Issue with Alpha Portal Login
+In-Reply-To: <20250516003000.E7F8G9H0I1J2@resumemate.com>
+References: <20250515211500.E9F0G1H2I3J4@resumemate.com> <20250516003000.E7F8G9H0I1J2@resumemate.com>
+X-Priority: 1 (Highest)
+
+Hi Team, PM Alpha,
+
+I'm looking into the Alpha Portal login issue now.
+Initial checks suggest a potential database connection pool exhaustion. Investigating further.
+Will provide an update within 30 minutes.
+
+Regards,
+[Your Name/Signature]
+Tech Consultant
+(Sent Item)
+--- EMAIL END ---
+
+--- EMAIL START ---
+Message-ID: <20250516013000.C1D2E3F4G5H6@resumemate.com>
+Date: Fri, 16 May 2025 01:30:00 +0100
+From: "Locklinked System Notification" <noreply.locklinked@resumemate.com>
+To: "Locklinked Admins" <admin.locklinked@resumemate.com>, "Tech Consultant" <resumemail@resumemate.com>
+Subject: Locklinked v1.1.6 (Security Patch) Deployed to Production
+X-Priority: 3 (Normal)
+
+This is an automated notification.
+
+The Locklinked application version 1.1.6 has been successfully deployed to the production environment.
+Changes in this version:
+- Security patch for authentication module (CVE-2025-XXXXX)
+- Minor performance improvements
+
+Deployment completed: Fri, 16 May 2025 01:28:00 WEST
+
+Regards,
+The Locklinked Deployment System
+--- EMAIL END ---
+
+--- EMAIL START ---
+Message-ID: <20250516014500.I7J8K9L0M1N2@fakebankalert.com>
+Date: Fri, 16 May 2025 01:45:00 +0100
+From: "Your Bank Security" <security@fakebankalert.com>
+To: <resumemail@resumemate.com>
+Subject: Security Alert: Unusual Login Attempt Detected on Your Account
+X-Priority: 1 (Highest)
+
+Dear Customer,
+
+Our systems detected an unusual login attempt to your online banking account from an unrecognized device or location (IP: XX.XXX.XX.XX, Location: Unknown).
+If this was not you, please secure your account immediately by clicking the link below and verifying your identity:
+[malicious link - http://fakebankalert.com/secure-login-verify-resumemate]
+
+If you do not act, your account may be temporarily locked for security reasons.
+
+Sincerely,
+Your Bank Security Department
+(This is a phishing attempt)
+--- EMAIL END ---
+
+--- EMAIL START ---
+Message-ID: <20250516020000.O3P4Q5R6S7T8@resumemate.com>
+Date: Fri, 16 May 2025 02:00:00 +0100
+From: "Tech Consultant" <resumemail@resumemate.com>
+To: "Night Shift IT Operator" <it.operator.night@resumemate.com>, "Project Manager (Client Alpha)" <pm.alpha@client-alpha.com>
+Subject: RESOLVED: URGENT: Issue with Alpha Portal Login
+In-Reply-To: <20250516011500.W5X6Y7Z8A9B0@resumemate.com>
+References: <20250515211500.E9F0G1H2I3J4@resumemate.com> <20250516003000.E7F8G9H0I1J2@resumemate.com> <20250516011500.W5X6Y7Z8A9B0@resumemate.com>
+X-Priority: 1 (Highest)
+
+Hi Team, PM Alpha,
+
+The Alpha Portal login issue is now resolved.
+The root cause was indeed database connection pool exhaustion on one of the read replicas due to a stuck query.
+I've recycled the affected instance and cleared the problematic query. Login functionality has been restored.
+Monitoring the system closely for any recurrence.
+
+Apologies for the disruption.
+
+Regards,
+[Your Name/Signature]
+Tech Consultant
+(Sent Item)
+--- EMAIL END ---
+
+--- EMAIL START ---
+Message-ID: <20250516021500.U9V0W1X2Y3Z4@resumemate.com>
+Date: Fri, 16 May 2025 02:15:00 +0100
+From: "Pedro Marques (CVGen Dev)" <pedro.marques@resumemate.com>
+To: "Tech Consultant" <resumemail@resumemate.com>
+Subject: Re: Query: CVGeneration PDF library options
+In-Reply-To: <20250515213000.K5L6M7N8O9P0@resumemate.com>
+References: <20250515213000.K5L6M7N8O9P0@resumemate.com>
+X-Priority: 3 (Normal)
+
+Hi Tech Consultant,
+
+Thanks for the quick reply on the PDF library question earlier! I saw your IM.
+Apache PDFBox sounds like a good candidate. I'll start looking into its capabilities for complex layouts.
+Appreciate the suggestion.
+
+Best,
+Pedro
+CVGeneration Team
+--- EMAIL END ---
+
+--- EMAIL START ---
+Message-ID: <20250516023000.A5B6C7D8E9F0@personalcolleague.com>
+Date: Fri, 16 May 2025 02:30:00 +0100
+From: "John B." <john.b@personalcolleague.com>
+To: "Tech Consultant" <resumemail@resumemate.com>
+Subject: Quick question - off topic
+X-Priority: 3 (Normal)
+
+Hey,
+
+Sorry to bother you this late.
+Remember that restaurant we went to near the old office, the one with the great seafood pasta? Can't for the life of me remember its name.
+Any chance you do? Planning to go there with family.
+
+Cheers,
+John
+--- EMAIL END ---
+
+--- EMAIL START ---
+Message-ID: <20250516024500.G1H2I3J4K5L6@resumemate.com>
+Date: Fri, 16 May 2025 02:45:00 +0100
+From: "IT Support" <it-support@resumemate.com>
+To: "All Staff Lisbon" <lisbon-staff@resumemate.com>
+Subject: Update: Lisbon Office Network Maintenance Completed
+In-Reply-To: <20250515182500.K7L8M9N0O1P2@resumemate.com>
+References: <20250515182500.K7L8M9N0O1P2@resumemate.com>
+X-Priority: 3 (Normal)
+
+Dear Lisbon Office Staff,
+
+The planned network maintenance for the Lisbon office has been completed successfully and ahead of schedule.
+All network services are now fully operational.
+
+Thank you for your cooperation.
+
+Regards,
+IT Support Team
+Resumemate
+--- EMAIL END ---
+
+--- EMAIL START ---
+Message-ID: <20250516030000.M7N8O9P0Q1R2@devops-tool-news.com>
+Date: Fri, 16 May 2025 03:00:00 +0100
+From: "DevOps Tooling News" <updates@devops-tool-news.com>
+To: <resumemail@resumemate.com>
+Subject: New Release: SuperOrchestrator v3.5 with Enhanced K8s Support
+X-Priority: 4 (Low)
+
+DevOps Tooling News
+
+Exciting Announcement: SuperOrchestrator v3.5 is here!
+This release brings:
+* Advanced Kubernetes cluster management features.
+* Improved CI/CD pipeline integration.
+* New plugins for popular monitoring tools.
+
+Learn more and download: [link - non-functional]
+--- EMAIL END ---
+
+--- EMAIL START ---
+Message-ID: <20250516031500.S3T4U5V6W7X8@resumemate.com>
+Date: Fri, 16 May 2025 03:15:00 +0100
+From: "Automated System Monitor" <monitor@resumemate.com>
+To: "IT Alerts" <it-alerts@resumemate.com>, "Tech Consultant" <resumemail@resumemate.com>
+Subject: RESOLVED: High CPU Usage on Server CVGEN-PROD-01
+In-Reply-To: <20250516004500.K3L4M5N6O7P8@resumemate.com>
+References: <20250516004500.K3L4M5N6O7P8@resumemate.com>
+X-Priority: 3 (Normal)
+
+System Alert Resolved:
+
+Server: CVGEN-PROD-01
+Metric: CPU Utilization
+Current Value: 25% (Below threshold)
+The high CPU usage alert on CVGEN-PROD-01 has been resolved.
+A scheduled batch job for CVGeneration data processing completed, which was causing the temporary spike.
+--- EMAIL END ---
+
+--- EMAIL START ---
+Message-ID: <20250516033000.Y9Z0A1B2C3D4@suspicious-sender.org>
+Date: Fri, 16 May 2025 03:30:00 +0100
+From: "Parcel Delivery Service" <tracking.update@suspicious-sender.org>
+To: <resumemail@resumemate.com>
+Subject: Delivery Attempt Failed - Action Required for Package #P72398173
+X-Priority: 2 (High)
+
+Dear Customer,
+
+We attempted to deliver your package #P72398173 today, but no one was available.
+To reschedule your delivery or arrange pickup, please click here:
+[malicious link - http://suspicious-sender.org/track-parcel-resumemate-confirm]
+
+A small redelivery fee may apply. Please update your details within 24 hours to avoid the package being returned to sender.
+
+Sincerely,
+Global Parcel Service
+(This is a phishing attempt)
+--- EMAIL END ---
+
+--- EMAIL START ---
+Message-ID: <20250516034500.E5F6G7H8I9J0@resumemate.com>
+Date: Fri, 16 May 2025 03:45:00 +0100
+From: "Elena Garcia (Locklinked Marketing ES)" <elena.garcia@resumemate.com>
+To: "Tech Consultant" <resumemail@resumemate.com>, "Locklinked Dev Team" <dev.locklinked@resumemate.com>
+Subject: Ideas para la campaña de Locklinked en España
+X-Priority: 3 (Normal)
+
+Hola equipo,
+
+Espero que estéis bien.
+Quería compartir algunas ideas iniciales para la campaña de marketing de Locklinked dirigida al mercado español.
+1.  Colaboraciones con influencers tecnológicos locales.
+2.  Webinars en español mostrando las características clave.
+3.  Contenido adaptado culturalmente para redes sociales.
+
+Tech Consultant, ¿sería posible obtener algunas métricas de uso anonimizadas específicas para usuarios en España para ayudarnos a segmentar mejor?
+Adjunto un borrador de la propuesta de campaña.
+
+Gracias,
+Elena García
+Marketing Locklinked (España)
+--- EMAIL END ---
+
+--- EMAIL START ---
+Message-ID: <20250516040000.K1L2M3N4O5P6@resumemate.com>
+Date: Fri, 16 May 2025 04:00:00 +0100
+From: "Building Management" <admin.building@resumemate-facility.com>
+To: "Lisbon Office" <lisbon-staff@resumemate.com>
+Subject: Reminder: Fire Drill Today at 11:00 AM
+X-Priority: 3 (Normal)
+
+Dear Lisbon Office Occupants,
+
+This is a reminder that a mandatory fire drill is scheduled for today, Friday, May 16th, at 11:00 AM.
+Please familiarize yourselves with the nearest emergency exits and assembly points.
+Participation is compulsory for all staff present in the office.
+
+Thank you for your cooperation in ensuring our workplace safety.
+
+Regards,
+Building Management
+--- EMAIL END ---
+
+--- EMAIL START ---
+Message-ID: <20250516041500.Q7R8S9T0U1V2@cloud-security-news.com>
+Date: Fri, 16 May 2025 04:15:00 +0100
+From: "Cloud Security Updates" <alerts@cloud-security-news.com>
+To: <resumemail@resumemate.com>
+Subject: Best Practices for Securing Your S3 Buckets
+X-Priority: 3 (Normal)
+
+Cloud Security Updates
+
+This week's focus: Amazon S3 Bucket Security
+
+Common misconfigurations can lead to data exposure. Ensure you are following these best practices:
+* Block Public Access (unless intentionally public).
+* Enable Server-Side Encryption.
+* Implement Least Privilege Access policies.
+* Monitor access logs regularly.
+
+Read our full guide: [link - non-functional]
+--- EMAIL END ---
+
+--- EMAIL START ---
+Message-ID: <20250516043000.W3X4Y5Z6A7B8@resumemate.com>
+Date: Fri, 16 May 2025 04:30:00 +0100
+From: "CVGen QA Team" <qa.cvgen@resumemate.com>
+To: "CVGen Dev Team" <dev.cvgen@resumemate.com>, "Tech Consultant" <resumemail@resumemate.com>
+Subject: New Bug Reported: CVGeneration - Template Z rendering issue on mobile
+X-Priority: 2 (High)
+
+Bug ID: CVG-781
+Severity: Major
+Project: CVGeneration
+Module: Template Rendering
+
+Description: Template Z does not render correctly on mobile devices (iOS Safari). Text overlaps and images are misaligned.
+This was observed on the latest staging build (v1.9.2-RC1).
+Steps to reproduce and screenshots attached.
+
+Please investigate.
+CVGen QA Team
+--- EMAIL END ---
+
+--- EMAIL START ---
+Message-ID: <20250516044500.C9D0E1F2G3H4@resumemate.com>
+Date: Fri, 16 May 2025 04:45:00 +0100
+From: "Legal Department" <legal@resumemate.com>
+To: "All Department Heads" <dept-heads@resumemate.com>, "Tech Consultant" <resumemail@resumemate.com>
+Subject: Policy Update: Data Retention Policy v3.0
+X-Priority: 3 (Normal)
+
+Dear Colleagues,
+
+Please be advised that the company's Data Retention Policy has been updated to version 3.0, effective June 1st, 2025.
+Key changes include:
+* Revised retention periods for client communication data.
+* Updated guidelines for archiving project-related documents.
+* Clarifications on GDPR compliance for personal data handling.
+
+The full policy document is available on the intranet: [link - non-functional]
+Please ensure your teams are aware of these changes.
+Tech Consultant, please review for any impact on systems you advise on.
+
+Regards,
+Legal Department
+Resumemate
+--- EMAIL END ---
+
+--- EMAIL START ---
+Message-ID: <20250516050000.I5J6K7L8M9N0@another-recruiter.co.uk>
+Date: Fri, 16 May 2025 05:00:00 +0100
+From: "Sophia Chen - Global Tech Talent" <sophia.c@globaltechtalent.co.uk>
+To: <resumemail@resumemate.com>
+Subject: Confidential: Head of Engineering role
+X-Priority: 3 (Normal)
+
+Dear [Consultant's Name],
+
+I am reaching out to you regarding a confidential Head of Engineering position with a rapidly growing SaaS scale-up in Berlin.
+Your background in technology consulting and project leadership seems like an excellent fit for their strategic needs.
+The role offers significant equity and the opportunity to shape the company's technology roadmap.
+Are you available for a discreet conversation next week?
+
+Kind regards,
+Sophia Chen
+Global Tech Talent
+--- EMAIL END ---
+
+--- EMAIL START ---
+Message-ID: <20250516051500.O1P2Q3R4S5T6@resumemate.com>
+Date: Fri, 16 May 2025 05:15:00 +0100
+From: "CEO Office" <ceo.office@resumemate.com>
+To: "Tech Consultant" <resumemail@resumemate.com>
+Subject: Request for Briefing: Upcoming Client X Renewal
+X-Priority: 2 (High)
+
+Hi [Consultant's Name],
+
+The CEO would like a brief update on the status and strategy for the upcoming Client X contract renewal.
+Could you please prepare a one-page summary highlighting key achievements, potential challenges, and your recommendations for the renewal discussion?
+Please send this over by end of day Monday, May 19th.
+Let me know if you need any specific input from our side.
+
+Thanks,
+Assistant to the CEO
+Resumemate
+--- EMAIL END ---
+
+--- EMAIL START ---
+Message-ID: <20250516053000.U7V8W9X0Y1Z2@resumemate.com>
+Date: Fri, 16 May 2025 05:30:00 +0100
+From: "Security Operations Center" <soc@resumemate.com>
+To: "Tech Consultant" <resumemail@resumemate.com>
+Subject: URGENT ACTION REQUIRED: Critical Security Alert - Account Compromise Detected (Ref: SOC-20250516-001)
+X-Priority: 1 (Highest)
+
+**********************************************************************
+URGENT SECURITY ALERT - IMMEDIATE ACTION REQUIRED
+**********************************************************************
+
+User: resumemail@resumemate.com
+Time of Detection: Fri, 16 May 2025 05:25:00 WEST
+Alert ID: SOC-20250516-001
+
+Dear Resumemate User (resumemail@resumemate.com),
+
+Our advanced threat detection systems have identified highly suspicious activity consistent with a **compromise of your user account credentials**.
+We have detected unauthorized access attempts originating from multiple unknown IP addresses (details logged internally).
+
+**IMMEDIATE REMEDIAL ACTION IS REQUIRED TO PROTECT YOUR ACCOUNT AND COMPANY DATA:**
+
+1.  **DO NOT USE YOUR CURRENT PASSWORD FOR ANY OTHER SYSTEM.**
+2.  **CHANGE YOUR RESUMEMATE PASSWORD IMMEDIATELY:**
+    * Go to: [internal password reset portal link - non-functional]
+    * Choose a strong, unique password that you have not used before.
+3.  **REVIEW RECENT ACCOUNT ACTIVITY:**
+    * Check your sent items, file access logs (if applicable), and any connected services for unauthorized actions. Report any suspicious findings to soc@resumemate.com immediately.
+4.  **ENABLE MULTI-FACTOR AUTHENTICATION (MFA) IF NOT ALREADY ACTIVE:**
+    * Instructions: [link to internal MFA setup guide - non-functional]
+5.  **SCAN YOUR PRIMARY WORKSTATION FOR MALWARE:**
+    * Run a full scan using the company-approved antivirus software.
+
+Our security team is actively investigating this incident. You may be contacted for further information.
+Failure to take these steps immediately could lead to further unauthorized access and potential data breaches.
+
+If you have any difficulty performing these actions or suspect your device is compromised, please contact the IT Helpdesk at x1234 or visit the IT support office immediately, referencing Alert ID SOC-20250516-001.
+
+Your prompt cooperation is critical.
+
+Sincerely,
+Resumemate Security Operations Center (SOC)
+--- EMAIL END ---
+
+--- EMAIL START ---
+Message-ID: <20250516054500.A3B4C5D6E7F8@resumemate.com>
+Date: Fri, 16 May 2025 05:45:00 +0100
+From: "Locklinked User Support" <support.locklinked@resumemate.com>
+To: "Tech Consultant" <resumemail@resumemate.com>
+Subject: Fwd: User Complaint: Locklinked slow performance
+X-Priority: 3 (Normal)
+
+Hi Tech Consultant,
+
+We've received a few user complaints this morning about Locklinked feeling sluggish, particularly when loading large project boards.
+This seems to have started in the last hour or so.
+Could this be related to any recent changes or increased load?
+Attaching one of the user emails for context.
+
+Thanks,
+Locklinked User Support Team
+
+--- Forwarded Message ---
+From: user@externalcompany.com
+Date: Fri, 16 May 2025 05:35:00 +0100
+Subject: Locklinked slow
+To: support.locklinked@resumemate.com
+
+Hi, Locklinked has been really slow for me this morning. Pages are taking a long time to load. Is there an issue?
+--- EMAIL END ---
+
+--- EMAIL START ---
+Message-ID: <20250516060000.G9H0I1J2K3L4@partner-company.com>
+Date: Fri, 16 May 2025 06:00:00 +0100
+From: "Chen Wei (Partner Innovations)" <chen.wei@partner-company.com>
+To: "Tech Consultant" <resumemail@resumemate.com>
+Subject: Follow-up: Joint Webinar Proposal
+X-Priority: 3 (Normal)
+
+Hi [Consultant's Name],
+
+Hope you're well.
+Just wanted to follow up on our conversation last week regarding the possibility of a joint webinar on "AI in Modern Software Development".
+Our marketing team is very enthusiastic about this.
+Do you have any updates from your side or a good time to connect next week to discuss further?
+
+Best regards,
+Chen Wei
+Partner Innovations Ltd.
+--- EMAIL END ---
+
+--- EMAIL START ---
+Message-ID: <20250516061500.M5N6O7P8Q9R0@resumemate.com>
+Date: Fri, 16 May 2025 06:15:00 +0100
+From: "Finance Department" <finance@resumemate.com>
+To: "Tech Consultant" <resumemail@resumemate.com>
+Subject: Reminder: Expense Reports for April Due
+X-Priority: 3 (Normal)
+
+Dear Colleague,
+
+This is a friendly reminder that all expense reports for April 2025 are due by the end of today, May 16th.
+Please submit your reports through the online portal: [link - non-functional]
+Late submissions may result in delayed reimbursement.
+
+Thank you,
+Finance Department
+Resumemate
+--- EMAIL END ---
+
+--- EMAIL START ---
+Message-ID: <20250516063000.S1T2U3V4W5X6@learning-platform.com>
+Date: Fri, 16 May 2025 06:30:00 +0100
+From: "TechLearn Platform" <courses@learning-platform.com>
+To: <resumemail@resumemate.com>
+Subject: New Course Alert: Advanced Kubernetes Security
+X-Priority: 4 (Low)
+
+Hi [User Name],
+
+Based on your interest in Cloud Technologies, we thought you'd like to know about our new course:
+**Advanced Kubernetes Security**
+
+Learn to secure your K8s clusters, implement network policies, manage secrets, and more from industry experts.
+Enroll now and get 20% off: [link - non-functional]
+
+Happy Learning!
+The TechLearn Team
+--- EMAIL END ---
+
+--- EMAIL START ---
+Message-ID: <20250516064500.Y7Z8A9B0C1D2@resumemate.com>
+Date: Fri, 16 May 2025 06:45:00 +0100
+From: "CVGen Dev Team Member 2" <dev.user2.cvgen@resumemate.com>
+To: "Tech Consultant" <resumemail@resumemate.com>, "CVGen Dev Team" <dev.cvgen@resumemate.com>
+Subject: Discussion: CVGeneration - Caching strategy for templates
+X-Priority: 3 (Normal)
+
+Hi team,
+
+As we add more complex templates to CVGeneration, the initial load time for the template selection screen is increasing.
+I think we should discuss implementing a more robust caching strategy, perhaps pre-rendering thumbnails or caching frequently used templates on the client-side.
+Tech Consultant, do you have any best practices or preferred approaches for this kind of scenario?
+Maybe we can add this to the agenda for the next sprint planning.
+
+Thanks,
+CVGen Dev Team
+--- EMAIL END ---
+
+--- EMAIL START ---
+Message-ID: <20250516070000.E3F4G5H6I7J8@phishy-invoice.com>
+Date: Fri, 16 May 2025 07:00:00 +0100
+From: "Accounts Payable Dept" <invoice.dept@phishy-invoice.com>
+To: <resumemail@resumemate.com>
+Subject: Overdue Invoice: INV-882371 - Immediate Payment Required
+X-Priority: 1 (Highest)
+
+Dear Accounts Department / User,
+
+Our records indicate that invoice INV-882371 for services rendered is now overdue.
+Amount: $1,275.50
+Due Date: May 10, 2025
+
+Please find the attached invoice and remit payment immediately to avoid service disruption and late fees.
+Payment can be made via bank transfer to the details in the invoice or by clicking here: [malicious link - http://phishy-invoice.com/pay-now-resumemate]
+
+If payment has already been made, please disregard this notice and send us proof of payment.
+
+Regards,
+Accounts Payable
+(This is a phishing attempt with a fake invoice attachment implied)
+--- EMAIL END ---
+
+--- EMAIL START ---
+Message-ID: <20250516071000.K9L0M1N2O3P4@resumemate.com>
+Date: Fri, 16 May 2025 07:10:00 +0100
+From: "HR Department" <hr@resumemate.com>
+To: "Tech Consultant" <resumemail@resumemate.com>
+Subject: Your Mandatory Security Awareness Training
+X-Priority: 2 (High)
+
+Dear Tech Consultant,
+
+Our records indicate that you have not yet completed the mandatory annual Security Awareness Training module for 2025.
+The deadline for completion is May 31st, 2025.
+This training is crucial for maintaining our company's security posture and compliance.
+
+Please access the training here: [link to internal training portal - non-functional]
+Completion typically takes approximately 45 minutes.
+
+Failure to complete this training by the deadline may result in restricted access to company systems.
+
+Regards,
+HR Department
+Resumemate
+--- EMAIL END ---
+
+--- EMAIL START ---
+Message-ID: <20250516072000.Q5R6S7T8U9V0@personal-family.pt>
+Date: Fri, 16 May 2025 07:20:00 +0100
+From: "Mãe" <mae@personal-family.pt>
+To: "Tech Consultant" <resumemail@resumemate.com>
+Subject: Lembraste do almoço de domingo?
+X-Priority: 3 (Normal)
+
+Meu querido/Minha querida,
+
+Só para confirmar, ainda vens almoçar domingo cá a casa, certo? O teu irmão/A tua irmã também vem.
+Queria fazer aquele teu prato favorito!
+Diz alguma coisa.
+
+Beijinhos grandes,
+Mãe
+--- EMAIL END ---
+
+--- EMAIL START ---
+Message-ID: <20250516073000.W1X2Y3Z4A5B6@resumemate.com>
+Date: Fri, 16 May 2025 07:30:00 +0100
+From: "Locklinked Dev Lead" <lead.locklinked@resumemate.com>
+To: "Locklinked Dev Team" <dev.locklinked@resumemate.com>, "Tech Consultant" <resumemail@resumemate.com>
+Subject: Locklinked Performance - Morning Update & Investigation
+In-Reply-To: <20250516054500.A3B4C5D6E7F8@resumemate.com>
+References: <20250516054500.A3B4C5D6E7F8@resumemate.com>
+X-Priority: 2 (High)
+
+Team, Consultant,
+
+Following up on the user reports of Locklinked sluggishness (forwarded by support).
+Initial diagnostics show a spike in read operations on our primary database instance starting around 05:00 WEST.
+This coincides with a new marketing analytics query that was scheduled to run. We suspect this query might be inefficient.
+We've temporarily disabled the query and are seeing performance recover.
+Tech Consultant, could you take a look at the query logic (I'll send it separately) and suggest optimizations?
+We need to ensure our analytics don't impact user experience.
+
+Thanks,
+Locklinked Dev Lead
+--- EMAIL END ---
+
+--- EMAIL START ---
+Message-ID: <20250516074000.C7D8E9F0G1H2@client-beta.org>
+Date: Fri, 16 May 2025 07:40:00 +0100
+From: "David Lee (Client Beta)" <david.lee@client-beta.org>
+To: "Tech Consultant" <resumemail@resumemate.com>
+Subject: Quick question regarding Project Chimera Phase 2
+X-Priority: 3 (Normal)
+
+Hi [Consultant's Name],
+
+Hope you're having a good start to your Friday.
+We're internally reviewing the SOW for Project Chimera Phase 2, and a question came up regarding the proposed timeline for the integration module.
+Could we schedule a brief 15-minute call sometime today or Monday to clarify?
+
+Best,
+David Lee
+Project Manager, Client Beta
+--- EMAIL END ---
+
+--- EMAIL START ---
+Message-ID: <20250516075000.I3J4K5L6M7N8@the-daily-code.io>
+Date: Fri, 16 May 2025 07:50:00 +0100
+From: "The Daily Code" <newsletter@the-daily-code.io>
+To: <resumemail@resumemate.com>
+Subject: TDC Digest: WebAssembly's Rise, New JS Frameworks, and more!
+X-Priority: 4 (Low)
+
+The Daily Code - Morning Brew
+
+Today's Top Links:
+* The Expanding Universe of WebAssembly: Beyond the Browser.
+* Comparing Three New JavaScript Frameworks for 2025.
+* Tutorial: Building a Real-time Chat App with Serverless Functions.
+* Opinion: Is Monolithic Architecture Making a Comeback?
+
+Happy Coding!
+[Link to website - non-functional]
+--- EMAIL END ---
+
+--- EMAIL START ---
+Message-ID: <20250516080000.O9P0Q1R2S3T4@resumemate.com>
+Date: Fri, 16 May 2025 08:00:00 +0100
+From: "Office Admin" <admin.lisbon@resumemate.com>
+To: "Lisbon Office Staff" <lisbon-staff@resumemate.com>
+Subject: Coffee Machine in Kitchenette B is Out of Order
+X-Priority: 3 (Normal)
+
+Good morning all,
+
+Please note that the coffee machine in Kitchenette B (3rd floor, West wing) is currently out of order.
+We have logged a service request, and it should be repaired by this afternoon.
+In the meantime, please use the machines in Kitchenette A or the main canteen.
+
+We apologize for any inconvenience.
+
+Regards,
+Office Administration
+--- EMAIL END ---
+
+--- EMAIL START ---
+Message-ID: <20250516080500.U5V6W7X8Y9Z0@resumemate.com>
+Date: Fri, 16 May 2025 08:05:00 +0100
+From: "CIO Resumemate" <cio@resumemate.com>
+To: "Tech Consultant" <resumemail@resumemate.com>, "IT Department Heads" <it.heads@resumemate.com>
+Subject: Strategic Review: Cloud Cost Optimization Initiatives
+X-Priority: 2 (High)
+
+Team,
+
+As part of our ongoing efforts to manage operational expenses, I'm initiating a strategic review of our cloud cost optimization initiatives.
+Tech Consultant, I'd like you to lead a small task force to identify key areas where we can achieve further savings without compromising performance or security across our major platforms (AWS, Azure).
+Please prepare an initial proposal outlining your approach, key stakeholders to involve, and a timeline for delivering recommendations by COB next Friday.
+Let's schedule a kick-off meeting early next week.
+
+Regards,
+[CIO's Name]
+Chief Information Officer
+Resumemate
+--- EMAIL END ---
+
+--- EMAIL START ---
+Message-ID: <20250516081000.A1B2C3D4E5F6@amigo-juan.es>
+Date: Fri, 16 May 2025 08:10:00 +0100
+From: "Juan Carlos" <jc@amigo-juan.es>
+To: "Tech Consultant" <resumemail@resumemate.com>
+Subject: Re: ¿Qué tal todo? Un café la próxima semana?
+In-Reply-To: <20250515210000.Y3Z4A5B6C7D8@personal-contact.es>
+References: <20250515210000.Y3Z4A5B6C7D8@personal-contact.es>
+X-Priority: 3 (Normal)
+
+¡Hola!
+
+Todo bien por aquí, gracias. ¡Sería genial tomar ese café!
+El martes por la tarde me vendría perfecto. ¿Sobre las 16:00 en el sitio de siempre cerca de tu oficina?
+Confírmame si te va bien.
+
+¡Qué ganas de ponernos al día!
+Un abrazo,
+Juan Carlos
+--- EMAIL END ---
+
+--- EMAIL START ---
+Message-ID: <20250516081500.G7H8I9J0K1L2@resumemate.com>
+Date: Fri, 16 May 2025 08:15:00 +0100
+From: "CVGen Automated Tests" <tests.cvgen@resumemate.com>
+To: "CVGen Dev Team" <dev.cvgen@resumemate.com>, "Tech Consultant" <resumemail@resumemate.com>
+Subject: Nightly Test Run PASSED: CVGeneration - Master Branch
+X-Priority: 3 (Normal)
+
+Test Run ID: #NIGHTLY-20250516-01
+Project: CVGeneration
+Branch: master
+Status: PASSED
+
+All 1578 tests passed.
+Code Coverage: 88.7%
+Performance benchmarks within acceptable limits.
+
+Full report: [link to internal test server - non-functional]
+--- EMAIL END ---
+
+--- EMAIL START ---
+Message-ID: <20250516082000.M3N4O5P6Q7R8@general-security-forum.org>
+Date: Fri, 16 May 2025 08:20:00 +0100
+From: "InfoSec Community Forum" <noreply@general-security-forum.org>
+To: <resumemail@resumemate.com>
+Subject: [Discussion] New Social Engineering Tactics on Professional Networks
+X-Priority: 4 (Low)
+
+New post in "Threat Landscape Discussions" on InfoSec Community Forum:
+
+Title: New Social Engineering Tactics on Professional Networks
+Author: sec_analyst_pro
+Excerpt: "Seeing a rise in attackers using highly personalized messages on platforms like LinkedIn to gather intel or initiate phishing. They often reference public company info or mutual connections to build false trust..."
+
+Read more or join the discussion: [link - non-functional]
+You are receiving this notification because you subscribed to this forum.
+--- EMAIL END ---
+
+--- EMAIL START ---
+Message-ID: <20250516082500.S9T0U1V2W3X4@resumemate.com>
+Date: Fri, 16 May 2025 08:25:00 +0100
+From: "Team Lead (Project Phoenix)" <lead.phoenix@resumemate.com>
+To: "Tech Consultant" <resumemail@resumemate.com>
+Subject: Re: Pergunta sobre a proposta (Project Phoenix) - Follow Up
+In-Reply-To: <20250515191500.I1J2K3L4M5N6@resumemate.com>
+References: <20250514113000.F6E5D4C3B2A1@clientcorp.com> <20250515191500.I1J2K3L4M5N6@resumemate.com>
+X-Priority: 3 (Normal)
+
+Hi Tech Consultant,
+
+Thanks for clarifying the Project Phoenix testing timeline with Maria Costa yesterday.
+She seemed happy with the explanation. Just wanted to let you know and say thanks for handling it.
+Client X is key for us, so good communication is vital.
+
+Best,
+Team Lead, Project Phoenix
+--- EMAIL END ---
+
+--- EMAIL START ---
+Message-ID: <20250516083000.Y5Z6A7B8C9D0@resumemate.com>
+Date: Fri, 16 May 2025 08:30:00 +0100
+From: "Colleague from another department" <colleague.x@resumemate.com>
+To: "Tech Consultant" <resumemail@resumemate.com>
+Subject: Quick question about cloud storage options
+X-Priority: 3 (Normal)
+
+Morning!
+
+Hope you have a good Friday.
+My team is looking into options for storing large video files for a new project. We need something secure, reasonably priced, and easy to integrate with our existing workflows.
+Since you're the go-to for this kind of stuff, I was wondering if you had any quick recommendations or could point me to some internal guidelines?
+
+Thanks a million!
+[Colleague's Name]
+--- EMAIL END ---
+
+--- EMAIL START ---
+Message-ID: <20250516083500.E1F2G3H4I5J6@fictional-bank-intl.com>
+Date: Fri, 16 May 2025 08:35:00 +0100
+From: "Global Finance Bank" <alerts@fictional-bank-intl.com>
+To: <resumemail@resumemate.com>
+Subject: Important: Your e-Statement is ready - Action Required
+X-Priority: 2 (High)
+
+Dear Valued Customer,
+
+Your latest e-Statement is now available.
+For security reasons, we require you to log in to view your statement.
+Please click here: [malicious link - http://fictional-bank-intl.com.login-portal.biz/viewstatement]
+
+If you do not review your statement, you may miss important notifications.
+Thank you for banking with Global Finance Bank.
+(This is a phishing attempt)
+--- EMAIL END ---
+
+--- EMAIL START ---
+Message-ID: <20250516084000.K7L8M9N0O1P2@resumemate.com>
+Date: Fri, 16 May 2025 08:40:00 +0100
+From: "Training Department" <training@resumemate.com>
+To: "All Employees" <all-employees@resumemate.com>
+Subject: New Optional Course Available: Advanced Excel Skills
+X-Priority: 4 (Low)
+
+Dear Employees,
+
+We are pleased to announce a new optional training course: "Advanced Excel Skills for Business Analytics".
+This course covers:
+* Advanced Formulas and Functions
+* PivotTables and PivotCharts
+* Data Validation and Conditional Formatting
+* Introduction to Macros (VBA)
+
+Duration: 2 half-days
+Dates: June 5th & 6th
+Location: Training Room 3 / Virtual Option Available
+
+If you are interested in enhancing your Excel skills, please register via the internal learning portal: [link - non-functional]
+Limited seats available.
+
+Regards,
+Training Department
+Resumemate
+--- EMAIL END ---
+
+--- EMAIL START ---
+Message-ID: <20250516084500.Q3R4S5T6U7V8@resumemate.com>
+Date: Fri, 16 May 2025 08:45:00 +0100
+From: "Locklinked System Alerts" <alerts.locklinked@resumemate.com>
+To: "Locklinked Admins" <admin.locklinked@resumemate.com>, "Tech Consultant" <resumemail@resumemate.com>
+Subject: INFO: Locklinked Database Read Replicas Scaled Up
+X-Priority: 3 (Normal)
+
+This is an automated notification.
+
+Due to increased load and to maintain optimal performance, the read replica count for the Locklinked production database has been automatically scaled up from 2 to 3 instances.
+This action was triggered by sustained high read IOPS.
+The new replica is online and serving traffic.
+
+Time: Fri, 16 May 2025 08:43:00 WEST
+
+Regards,
+Locklinked Automated Operations
+--- EMAIL END ---
+
+--- EMAIL START ---
+Message-ID: <20250516085000.W9X0Y1Z2A3B4@tech-conference-europe.org>
+Date: Fri, 16 May 2025 08:50:00 +0100
+From: "EuroTech Summit Organizers" <info@tech-conference-europe.org>
+To: <resumemail@resumemate.com>
+Subject: Last Chance: Early Bird Tickets for EuroTech Summit 2025 End Today!
+X-Priority: 3 (Normal)
+
+Dear Tech Enthusiast,
+
+This is your final reminder! Early bird registration for EuroTech Summit 2025 closes at midnight tonight (CET).
+Don't miss the chance to save up to 30% on your ticket to Europe's premier technology conference.
+Join us in Amsterdam, October 14-16, for insightful keynotes, hands-on workshops, and unparalleled networking opportunities.
+
+Speakers include leaders from [Major Tech Company 1], [Major Tech Company 2], and innovative startups.
+Secure your spot now: [link - non-functional]
+
+We hope to see you there!
+The EuroTech Summit Team
+--- EMAIL END ---
+
+--- EMAIL START ---
+Message-ID: <20250516085500.C5D6E7F8G9H0@resumemate.com>
+Date: Fri, 16 May 2025 08:55:00 +0100
+From: "IT Helpdesk" <helpdesk@resumemate.com>
+To: "Tech Consultant" <resumemail@resumemate.com>
+Subject: Your Ticket #HD20250516-012 (Password Reset Query) - Status Update
+X-Priority: 3 (Normal)
+
+Dear Tech Consultant,
+
+This email is to confirm that your IT Helpdesk ticket #HD20250516-012 regarding a password reset query for a test account has been logged.
+A technician will look into this shortly. You will receive an update once the issue is resolved or if more information is needed.
+You can track the status of your ticket here: [link to helpdesk portal - non-functional]
+
+Thank you,
+Resumemate IT Helpdesk
+(This could be related to the urgent security alert if the user initiated a query after changing password)
+--- EMAIL END ---
+
+--- EMAIL START ---
+Message-ID: <20250516085900.I1J2K3L4M5N6@resumemate.com>
+Date: Fri, 16 May 2025 08:59:00 +0100
+From: "Your Calendar" <calendar-notifications@resumemate.com>
+To: "Tech Consultant" <resumemail@resumemate.com>
+Subject: Reminder: Meeting: "CVGeneration UI Sync" at 09:30 today (Conference Room 5)
+X-Priority: 2 (High)
+
+This is a calendar reminder.
+
+Event: CVGeneration UI Sync
+Time: Fri, 16 May 2025 09:30 - 10:30 WEST
+Location: Conference Room 5
+Attendees: Project Lead CVGen, Ana Pinto (Design), Tech Consultant
+
+Agenda: Discuss feedback on v2 UI mockups, finalize next steps for prototype.
+--- EMAIL END ---
+

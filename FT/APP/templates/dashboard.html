@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard - ResuMail</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            color: #212529;
+        }
+
+        .container {
+            max-width: 960px;
+        }
+
+        .topbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .topbar h3 {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .topbar .buttons {
+            display: flex;
+            gap: 0.5rem;
+            align-items: center;
+        }
+
+        .email-card {
+            background-color: #f3f0ff;
+            border: none;
+            border-left: 6px solid #7a5af8;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            border-radius: 12px;
+        }
+
+        .btn-purple {
+            background-color: #7a5af8;
+            border-color: #7a5af8;
+            color: white;
+            font-weight: 500;
+        }
+
+        .btn-purple:hover {
+            background-color: #684de0;
+            border-color: #684de0;
+        }
+
+        .subtitle {
+            font-size: 0.9rem;
+            color: #6c757d;
+        }
+
+        .email-preview {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 1rem 1.25rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.03);
+            border-left: 4px solid #7a5af8;
+        }
+
+        .email-subject {
+            font-weight: 600;
+            color: #343a40;
+        }
+
+        .email-body {
+            font-size: 0.9rem;
+            color: #6c757d;
+            margin-top: 0.25rem;
+        }
+
+        /* Dark Mode */
+        body.dark-mode {
+            background-color: #121212;
+            color: #e0e0e0;
+        }
+
+        body.dark-mode .email-card,
+        body.dark-mode .email-preview {
+            background-color: #1f1f1f;
+            border-color: #7a5af8;
+            box-shadow: none;
+        }
+
+        body.dark-mode .email-subject {
+            color: #e0e0e0;
+        }
+
+        body.dark-mode .email-body,
+        body.dark-mode .subtitle {
+            color: #bbbbbb;
+        }
+
+        body.dark-mode .btn,
+        body.dark-mode .form-control {
+            background-color: #2a2a2a;
+            color: #f1f1f1;
+            border-color: #444;
+        }
+
+        body.dark-mode .btn:hover {
+            background-color: #3c3c3c;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container py-5">
+
+        <!-- Topbar -->
+        <div class="topbar">
+            <div>
+                <h3>
+                    <img src="{{ url_for('static', filename='img/logo.png') }}" alt="logo" width="32">
+                    ResuMail
+                </h3>
+                <span class="subtitle">Welcome back, <strong>{{ user }}</strong></span>
+            </div>
+            <div class="buttons">
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="themeToggle">
+                    <label class="form-check-label small" for="themeToggle">🌙 Dark</label>
+                </div>
+                <a href="{{ url_for('settings') }}" class="btn btn-outline-secondary">⚙️ Settings</a>
+                <a href="{{ url_for('logout') }}" class="btn btn-outline-danger">🔓 Logout</a>
+            </div>
+        </div>
+
+        <!-- Card with unread emails -->
+        <div class="card email-card mb-4 p-4">
+            <div class="d-flex justify-content-between align-items-center">
+                <div>
+                    <h5 class="mb-1">📨 Unread Emails</h5>
+                    <p class="mb-0 text-muted">You have <strong>{{ unread_count }}</strong> emails waiting to be read.
+                    </p>
+                </div>
+                <a href="{{ url_for('summarize') }}" class="btn btn-purple btn-lg">⚡ Summarize All</a>
+            </div>
+        </div>
+
+        <!-- Email previews -->
+        {% if emails %}
+        <h5 class="mb-3 text-secondary">🕵️ Preview:</h5>
+        {% for email in emails %}
+        <div class="email-preview">
+            <div class="email-subject">{{ email.subject }}</div>
+            <div class="email-body">{{ email.body[:150] }}...</div>
+        </div>
+        {% endfor %}
+        {% endif %}
+
+    </div>
+
+    <!-- Dark mode toggle script -->
+    <script>
+        const toggle = document.getElementById("themeToggle");
+        const body = document.body;
+
+        if (localStorage.getItem("theme") === "dark") {
+            body.classList.add("dark-mode");
+            toggle.checked = true;
+        }
+
+        toggle.addEventListener("change", () => {
+            if (toggle.checked) {
+                body.classList.add("dark-mode");
+                localStorage.setItem("theme", "dark");
+            } else {
+                body.classList.remove("dark-mode");
+                localStorage.setItem("theme", "light");
+            }
+        });
+    </script>
+</body>
+
+</html>

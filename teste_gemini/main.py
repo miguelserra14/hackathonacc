@@ -45,9 +45,9 @@ def parse_topics_from_file(filepath):
 
 if __name__ == "__main__":
     emails = parse_emails_from_file("email_dataset.txt")
-    # Se quiser usar tópicos como prioridade:
-    # prioritize = parse_topics_from_file("email_dataset_topics.txt")
-    # deprioritize = ["newsletter", "spam", "phishing", "recruitment", "job opportunities", "external news", "lottery", "seo"]
+    #Se quiser usar tópicos como prioridade:
+    prioritize = parse_topics_from_file("email_dataset_topics.txt")
+    #deprioritize = ["newsletter", "spam", "phishing", "recruitment", "job opportunities", "external news", "lottery", "seo"]
     prioritize = ["project", "client", "meeting", "security", "locklinked", "cvgen", "phoenix", "chimera", "alpha", "beta"]
     deprioritize = ["newsletter", "spam", "phishing", "recruitment", "job opportunities", "external news", "lottery", "seo"]
 

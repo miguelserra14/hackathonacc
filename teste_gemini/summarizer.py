@@ -1,50 +1,50 @@
 import google.generativeai as genai
 import os
 from dotenv import load_dotenv
+import re
+from collections import Counter
 
 load_dotenv()
 api_key = os.getenv("GEMINI_API_KEY")
 genai.configure(api_key=api_key)
 
-def summarize_emails(
+def build_prompt(
     emails,
     prioritize_keywords=None,
     deprioritize_keywords=None,
     more_relevant_conversations=None,
     less_relevant_conversations=None
 ):
-    """
-    emails: lista de strings (e-mails simples) ou lista de dicionários (e-mails avançados)
-    Cada dicionário pode ter campos como: assunto, remetente, data, corpo, etc.
-    """
-    prompt = "Resume os seguintes e-mails em formato digerível, em 2-3 frases por e-mail. Com base no conteúdo, divide os mails relevantes em prioridade alta, média e baixa. No final mete uma frase com os números e as causas dos e-mails irrelevantes no seguinte formato E-mails irrelevantes (x,y,z,etc):**  Esses e-mails foram considerados irrelevantes porque eram mensagens de phishing (x,y,z), atualizações de segurança externas ou newsletters (a,b,b,c,d,e), propostas de emprego (f,g), lembretes de treinos (60), ou atualizações de tickets de suporte (76) que não forneciam informações sobre os projetos."
+    prompt = (
+        "Summarize the following emails in a digestible format, using 2-3 sentences per email. "
+        "Based on the content, divide the relevant emails into high, medium, and low priority. "
+        "At the end, add a sentence with the numbers and causes of irrelevant emails in the following format: "
+        "Irrelevant emails (x,y,z,etc):** These emails were considered irrelevant because they were phishing messages (x,y,z), "
+        "external security updates or newsletters (a,b,b,c,d,e), job proposals (f,g), training reminders (60), or support ticket updates (76) that did not provide information about the projects."
+    )
     if prioritize_keywords:
-        prompt += f"\nPriorize os seguintes tópicos/palavras: {', '.join(prioritize_keywords)}."
+        prompt += f"\nPrioritize the following topics/keywords: {', '.join(prioritize_keywords)}."
     if deprioritize_keywords:
-        prompt += f"\nDespriorize os seguintes tópicos/palavras: {', '.join(deprioritize_keywords)}."
+        prompt += f"\nDeprioritize the following topics/keywords: {', '.join(deprioritize_keywords)}."
     if more_relevant_conversations:
-        prompt += f"\nConsidere estas conversas como mais relevantes: {', '.join(more_relevant_conversations)}."
+        prompt += f"\nConsider these conversations as more relevant: {', '.join(more_relevant_conversations)}."
     if less_relevant_conversations:
-        prompt += f"\nConsidere estas conversas como menos relevantes: {', '.join(less_relevant_conversations)}."
-    prompt += "\n\nE-mails:\n"
+        prompt += f"\nConsider these conversations as less relevant: {', '.join(less_relevant_conversations)}."
+    prompt += "\n\nEmails:\n"
 
     irrelevantes = []
-
-    total_emails = len(emails)
-    alta, media, baixa, irrelevantes_count = 0, 0, 0, 0
-
     for idx, email in enumerate(emails, 1):
         motivo = None
         email_str = ""
         texto_completo = ""
         if isinstance(email, dict):
             if 'assunto' in email:
-                email_str += f"Assunto: {email['assunto']}\n"
+                email_str += f"Subject: {email['assunto']}\n"
                 texto_completo += email['assunto'] + " "
             if 'remetente' in email:
-                email_str += f"Remetente: {email['remetente']}\n"
+                email_str += f"From: {email['remetente']}\n"
             if 'data' in email:
-                email_str += f"Data: {email['data']}\n"
+                email_str += f"Date: {email['data']}\n"
             if 'corpo' in email:
                 corpo = email['corpo']
                 texto_completo += corpo
@@ -52,25 +52,22 @@ def summarize_emails(
                     idx_news = corpo.lower().find("newsletter")
                     parte_relevante = corpo[:idx_news].strip()
                     if parte_relevante:
-                        email_str += f"Corpo: {parte_relevante}\n"
+                        email_str += f"Body: {parte_relevante}\n"
                     else:
-                        motivo = "contém uma newsletter e é irrelevante para o resumo"
+                        motivo = "contains a newsletter and is irrelevant for the summary"
                 else:
-                    email_str += f"Corpo: {corpo}\n"
-            # Novo critério: se não contém nenhuma palavra-chave relevante, marca como irrelevante
+                    email_str += f"Body: {corpo}\n"
             palavras_relevantes = (prioritize_keywords or [])
             if palavras_relevantes and not any(p.lower() in texto_completo.lower() for p in palavras_relevantes):
-                motivo = "não contém informações relevantes sobre os tópicos prioritários"
-            if 'Corpo:' in email_str and email_str.strip().split('Corpo:')[1].strip() and not motivo:
+                motivo = "does not contain relevant information about the priority topics"
+            if 'Body:' in email_str and email_str.strip().split('Body:')[1].strip() and not motivo:
                 prompt += f"{idx}.\n{email_str}\n"
             elif motivo:
                 irrelevantes.append((idx, motivo))
         else:
-            # Assume string simples
             texto_completo = email
             motivo = None
             parte_relevante = None
-            # Verifica se há alguma palavra despriorizada no texto
             palavra_despriorizada = None
             if deprioritize_keywords:
                 for palavra in deprioritize_keywords:
@@ -81,10 +78,10 @@ def summarize_emails(
                 idx_despriorizada = email.lower().find(palavra_despriorizada.lower())
                 parte_relevante = email[:idx_despriorizada].strip()
                 if not parte_relevante:
-                    motivo = f"contém '{palavra_despriorizada}' e é irrelevante para o resumo"
+                    motivo = f"contains '{palavra_despriorizada}' and is irrelevant for the summary"
             palavras_relevantes = (prioritize_keywords or [])
             if palavras_relevantes and not any(p.lower() in texto_completo.lower() for p in palavras_relevantes):
-                motivo = "não contém informações relevantes sobre os tópicos prioritários"
+                motivo = "does not contain relevant information about the priority topics"
                 continue
             if motivo:
                 irrelevantes.append((idx, motivo))
@@ -97,16 +94,84 @@ def summarize_emails(
     if irrelevantes:
         prompt += "\n"
         if phishing:
-            prompt += f"Os e-mails {', '.join(map(str, phishing))} foram omitidos pois eram tentativas de phishing.  "
+            prompt += f"Emails {', '.join(map(str, phishing))} were omitted because they were phishing attempts.  "
         if outros:
-            prompt += "Outros e-mails foram omitidos pois eram mensagens irrelevantes ou externos com pouca informação sobre os projetos.\n"
+            prompt += "Other emails were omitted because they were irrelevant messages or external with little project information.\n"
+    return prompt
 
-    
+
+def extract_email_numbers(section_title, summary):
+    pattern = rf"\*\*{section_title}:\*\*\s*(.*?)\n\s*\*\*"
+    match = re.search(pattern, summary, re.DOTALL | re.IGNORECASE)
+    if not match:
+        pattern = rf"\*\*{section_title}:\*\*\s*(.*)"
+        match = re.search(pattern, summary, re.DOTALL | re.IGNORECASE)
+    if not match:
+        return []
+    section_text = match.group(1)
+    email_nums = re.findall(r"Email ([\d, &]+):", section_text)
+    numbers = []
+    for group in email_nums:
+        for part in re.split(r"[,&]", group):
+            num = part.strip()
+            if num.isdigit():
+                numbers.append(int(num))
+    return numbers
+
+def extract_summary_stats(summary, emails):
+    total_emails = len(emails)
+    high = len(extract_email_numbers("High Priority", summary))
+    medium = len(extract_email_numbers("Medium Priority", summary))
+    low = len(extract_email_numbers("Low Priority", summary))
+    irrelevant_match = re.search(r"Irrelevant emails\s*\(([\d,\s]+)\)", summary, re.IGNORECASE)
+    if irrelevant_match:
+        irrelevant = len([n for n in re.split(r"[,\s]+", irrelevant_match.group(1)) if n.isdigit()])
+    else:
+        irrelevant = 0
+    remetentes = []
+    for email in emails:
+        if isinstance(email, dict) and 'remetente' in email:
+            remetentes.append(email['remetente'])
+    most_common_sender = Counter(remetentes).most_common(1)
+    most_common_sender = most_common_sender[0][0] if most_common_sender else "Unknown"
+    return total_emails, high, medium, low, irrelevant, most_common_sender
+
+def build_info_text(total_emails, high, medium, low, irrelevant, most_common_sender):
+    return (
+        f"Summary of received emails:\n"
+        f"- Total emails: {total_emails}\n"
+        f"- High priority: {high}\n"
+        f"- Medium priority: {medium}\n"
+        f"- Low priority: {low}\n"
+        f"- Irrelevant: {irrelevant}\n"
+        f"- Most frequent sender/conversation: {most_common_sender}\n\n"
+    )
+
+def summarize_emails(
+    emails,
+    prioritize_keywords=None,
+    deprioritize_keywords=None,
+    more_relevant_conversations=None,
+    less_relevant_conversations=None
+):
+    prompt = build_prompt(
+        emails,
+        prioritize_keywords,
+        deprioritize_keywords,
+        more_relevant_conversations,
+        less_relevant_conversations
+    )
     try:
         model = genai.GenerativeModel('models/gemini-1.5-flash-latest')
         response = model.generate_content(prompt)
-
-        return response.text.strip()
+        summary = response.text.strip()
+        total_emails, high, medium, low, irrelevant, most_common_sender = extract_summary_stats(summary, emails)
+        info_text = build_info_text(total_emails, high, medium, low, irrelevant, most_common_sender)
+        return info_text + summary
     except Exception as e:
-        print(f"Erro ao resumir: {e}")
+        print(f"Error summarizing: {e}")
         return None
+
+
+
+

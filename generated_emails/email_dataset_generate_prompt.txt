@@ -1,0 +1,31 @@
+You are a developing an application to analyze emails that a technology consultant receives in the morning. 
+
+You need emails for testing the application. 
+
+Generate a text file with the content of 100 emails, following the following rules:
+
+- The email inbox is resumemail@resumemate.com 
+
+- Received between 18:00 of May 15th and the 09:00 of May 16h of 2025.
+
+- Also create emails from previous to these dates that belong to the same conversation of emails received during the define timestamp.  
+
+- Include also internal and external newsletter emails.
+
+- Include a few spam emails and phishing attempts.
+
+- Include a few personal emails.
+
+- Include emails with different priorities, reminders and warning.
+
+- Include a few email about general security issues.
+
+- Include an email with a urgent remedial procedure about a security issue targeting the user.
+
+- Include conversations in Portuguese, Spanish and English.
+
+- The local timezone is current Lisbon time.
+
+- Create conversation for the following internal projects: CVGeneration, Locklinked
+
+- Feel free to include other topics typical for a technology company.

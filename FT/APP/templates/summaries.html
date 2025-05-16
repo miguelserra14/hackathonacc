@@ -15,45 +15,73 @@
             max-width: 960px;
         }
 
-        .email-summary-card {
-            background-color: #f8f9fa;
+        .priority-section {
+            margin-bottom: 2rem;
+        }
+
+        .priority-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .priority-high {
+            color: #dc3545;
+        }
+
+        .priority-medium {
+            color: #ffc107;
+        }
+
+        .priority-low {
+            color: #28a745;
+        }
+
+        .email-card {
+            background-color: #ffffff;
             border-left: 6px solid #7a5af8;
             border-radius: 12px;
-            padding: 1.5rem;
-            margin-bottom: 1.5rem;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.03);
+            padding: 1rem 1.5rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
         }
 
-        .summary-title {
-            font-weight: 600;
+        .email-title {
+            font-weight: bold;
             font-size: 1.1rem;
+            margin-bottom: 0.5rem;
         }
 
-        .summary-type {
-            font-size: 0.85rem;
-            font-weight: 500;
-            padding: 0.25rem 0.75rem;
-            border-radius: 20px;
-            background-color: #eaeaea;
-            display: inline-block;
-            margin-left: 0.5rem;
-        }
-
-        .summary-topics {
-            font-size: 0.85rem;
+        .email-body {
+            font-size: 0.95rem;
             color: #6c757d;
         }
 
-        .summary-text {
-            margin-top: 0.5rem;
-            font-size: 0.95rem;
+        .irrelevant-section {
+            margin-top: 2rem;
+            padding: 1rem;
+            background-color: #f8d7da;
+            border: 1px solid #f5c6cb;
+            border-radius: 8px;
+            color: #721c24;
         }
 
-        .summary-insight {
-            margin-top: 0.75rem;
-            font-style: italic;
-            color: #495057;
-            font-size: 0.9rem;
+        .stats-section {
+            margin-top: 2rem;
+            padding: 1rem;
+            background-color: #e2e3e5;
+            border: 1px solid #d6d8db;
+            border-radius: 8px;
+            color: #383d41;
+        }
+
+        .stats-title {
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .btn-back {
+            margin-top: 2rem;
         }
 
         body.dark-mode {
@@ -61,45 +89,96 @@
             color: #e0e0e0;
         }
 
-        body.dark-mode .email-summary-card {
+        body.dark-mode .email-card {
             background-color: #1f1f1f;
             border-color: #7a5af8;
         }
 
-        body.dark-mode .summary-topics,
-        body.dark-mode .summary-insight {
-            color: #bbbbbb;
+        body.dark-mode .irrelevant-section {
+            background-color: #452f31;
+            border-color: #5a3c3e;
+            color: #f8d7da;
+        }
+
+        body.dark-mode .stats-section {
+            background-color: #2a2a2a;
+            border-color: #444;
+            color: #e2e3e5;
         }
     </style>
 </head>
 
 <body>
     <div class="container py-5">
-        <div class="d-flex justify-content-between align-items-center mb-4">
-            <h2 class="fw-bold mb-0">📋 Email Summaries</h2>
-            <div class="form-check form-switch">
-                <input class="form-check-input" type="checkbox" id="themeToggle">
-                <label class="form-check-label small" for="themeToggle">🌙 Dark</label>
+        <h2 class="mb-4">📋 Email Summary</h2>
+
+        <!-- High Priority Section -->
+        <div class="priority-section">
+            <h3 class="priority-title priority-high">🔥 High Priority</h3>
+            {% if summaries.high_priority %}
+            {% for email in summaries.high_priority %}
+            <div class="email-card">
+                <div class="email-title">{{ email.subject }}</div>
+                <div class="email-body">{{ email.body }}</div>
             </div>
+            {% endfor %}
+            {% else %}
+            <p class="text-muted">No high-priority emails found.</p>
+            {% endif %}
         </div>
 
-        {% if summaries %}
-        {% for email in summaries %}
-        <div class="email-summary-card">
-            <div class="summary-title">
-                {{ email.subject }}
-                <span class="summary-type">{{ email.type }}</span>
+        <!-- Medium Priority Section -->
+        <div class="priority-section">
+            <h3 class="priority-title priority-medium">⚡ Medium Priority</h3>
+            {% if summaries.medium_priority %}
+            {% for email in summaries.medium_priority %}
+            <div class="email-card">
+                <div class="email-title">{{ email.subject }}</div>
+                <div class="email-body">{{ email.body }}</div>
             </div>
-            <div class="summary-topics">🧠 Topics: {{ email.topics | join(', ') }}</div>
-            <div class="summary-text">📄 {{ email.summary }}</div>
-            <div class="summary-insight">💡 {{ email.insight }}</div>
+            {% endfor %}
+            {% else %}
+            <p class="text-muted">No medium-priority emails found.</p>
+            {% endif %}
         </div>
-        {% endfor %}
-        {% else %}
-        <p class="text-muted">No summaries available.</p>
-        {% endif %}
 
-        <a href="{{ url_for('dashboard') }}" class="btn btn-outline-secondary mt-4">← Back to Dashboard</a>
+        <!-- Low Priority Section -->
+        <div class="priority-section">
+            <h3 class="priority-title priority-low">✅ Low Priority</h3>
+            {% if summaries.low_priority %}
+            {% for email in summaries.low_priority %}
+            <div class="email-card">
+                <div class="email-title">{{ email.subject }}</div>
+                <div class="email-body">{{ email.body }}</div>
+            </div>
+            {% endfor %}
+            {% else %}
+            <p class="text-muted">No low-priority emails found.</p>
+            {% endif %}
+        </div>
+
+        <!-- Irrelevant Emails Section -->
+        <div class="irrelevant-section">
+            <h4>🗑️ Irrelevant Emails</h4>
+            <p>{{ summaries.irrelevant_emails }}</p>
+        </div>
+
+        <!-- Statistical Summary Section -->
+        <div class="stats-section">
+            <h4 class="stats-title">📊 Statistical Summary</h4>
+            <ul>
+                <li><strong>Total emails:</strong> {{ summaries.stats.total_emails }}</li>
+                <li><strong>High priority:</strong> {{ summaries.stats.high_priority }}</li>
+                <li><strong>Medium priority:</strong> {{ summaries.stats.medium_priority }}</li>
+                <li><strong>Low priority:</strong> {{ summaries.stats.low_priority }}</li>
+                <li><strong>Irrelevant:</strong> {{ summaries.stats.irrelevant }}</li>
+            </ul>
+        </div>
+
+        <!-- Back Button -->
+        <div class="btn-back">
+            <a href="{{ url_for('dashboard') }}" class="btn btn-secondary">← Back to Dashboard</a>
+        </div>
     </div>
 
     <script>

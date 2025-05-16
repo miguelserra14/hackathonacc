@@ -79,7 +79,6 @@
             margin-top: 0.25rem;
         }
 
-        /* Dark Mode */
         body.dark-mode {
             background-color: #121212;
             color: #e0e0e0;
@@ -135,6 +134,24 @@
                 <a href="{{ url_for('logout') }}" class="btn btn-outline-danger">🔓 Logout</a>
             </div>
         </div>
+
+        <!-- Form to select date range -->
+        <form method="POST" class="card email-card mb-4 p-4">
+            <div class="row g-3 align-items-end">
+                <div class="col-md-5">
+                    <label for="date_from" class="form-label">From:</label>
+                    <input type="date" class="form-control" name="date_from" id="date_from" value="{{ date_from }}"
+                        required>
+                </div>
+                <div class="col-md-5">
+                    <label for="date_to" class="form-label">To:</label>
+                    <input type="date" class="form-control" name="date_to" id="date_to" value="{{ date_to }}" required>
+                </div>
+                <div class="col-md-2">
+                    <button type="submit" class="btn btn-purple w-100">📥 Fetch</button>
+                </div>
+            </div>
+        </form>
 
         <!-- Card with unread emails -->
         <div class="card email-card mb-4 p-4">

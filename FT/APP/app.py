@@ -2,7 +2,10 @@
 
 from flask import Flask, render_template, request, redirect, url_for, session, flash, jsonify
 from email_reader import fetch_emails
+from summarizer import summarize_emails
+import os
 import json
+from datetime import datetime
 
 app = Flask(__name__)
 app.secret_key = 'your_secret_key_here'
@@ -31,7 +34,7 @@ def login():
     theme = session.get('theme', 'light')
     return render_template('login.html', error=error, theme=theme)
 
-@app.route('/dashboard')
+@app.route('/dashboard', methods=['GET', 'POST'])
 def dashboard():
     if 'user' not in session:
         return redirect(url_for('login'))
@@ -42,28 +45,55 @@ def dashboard():
         flash('Please configure your email address first', 'warning')
         return redirect(url_for('settings'))
 
-    emails = fetch_emails("14-May-2025", "17-May-2025")
-    unread_count = len(emails)
-    session['emails_to_summarize'] = emails
-    theme = session.get('theme', 'light')
+    emails = []
+    unread_count = 0
+    date_from = date_to = ""
+    if request.method == 'POST':
+        try:
+            date_from = request.form.get('date_from')
+            date_to = request.form.get('date_to')
+            df = datetime.strptime(date_from, "%Y-%m-%d").strftime("%d-%b-%Y")
+            dt = datetime.strptime(date_to, "%Y-%m-%d").strftime("%d-%b-%Y")
+            emails = fetch_emails(df, dt)
+            unread_count = len(emails)
+            session['emails_to_summarize'] = emails
+        except Exception as e:
+            flash(f"Failed to fetch emails: {e}", "danger")
 
-    return render_template('dashboard.html', user=user, unread_count=unread_count, emails=emails, theme=theme)
+    theme = session.get('theme', 'light')
+    return render_template('dashboard.html', user=user, unread_count=unread_count, emails=emails, theme=theme, date_from=date_from, date_to=date_to)
 
 @app.route('/summarize')
 def summarize():
     if 'user' not in session:
         return redirect(url_for('login'))
 
-    if 'email_account' not in session or not session['email_account']:
-        flash('Please configure your email address first', 'warning')
-        return redirect(url_for('settings'))
+    if 'emails_to_summarize' not in session:
+        flash("No emails found for summarization.", "warning")
+        return redirect(url_for('dashboard'))
 
-    # Simulação: carregar resumos de um ficheiro local (mock)
-    with open("FT/APP/summaries_mock.json", "r", encoding="utf-8") as f:
-        summaries = json.load(f)
+    emails_raw = session['emails_to_summarize']
+    emails = [
+        {"subject": e.get("Subject", ""), "body": e.get("Body", "")}
+        for e in emails_raw if e.get("Body", "").strip()
+    ]
 
-    session['summaries'] = summaries
-    return redirect(url_for('summaries'))
+    prioritize = ["project", "client", "meeting", "security", "locklinked", "cvgen", "phoenix", "chimera", "alpha", "beta"]
+    deprioritize = ["newsletter", "spam", "phishing", "recruitment", "job opportunities", "external news", "lottery", "seo"]
+
+    structured_summary = summarize_emails(
+        emails,
+        prioritize_keywords=prioritize,
+        deprioritize_keywords=deprioritize
+    )
+
+    os.makedirs("static/summaries", exist_ok=True)
+    summary_path = f"static/summaries/{session['user']}.json"
+    with open(summary_path, "w", encoding="utf-8") as f:
+        json.dump(structured_summary, f, indent=2, ensure_ascii=False)
+    session['summary_path'] = summary_path
+
+    return render_template('summaries.html', summaries=structured_summary)
 
 @app.route('/settings', methods=['GET', 'POST'])
 def settings():
@@ -107,14 +137,6 @@ def set_theme():
 def logout():
     session.clear()
     return redirect(url_for('login'))
-
-@app.route('/summaries')
-def summaries():
-    if 'user' not in session:
-        return redirect(url_for('login'))
-
-    summaries = session.get('summaries', [])
-    return render_template('summaries.html', summaries=summaries)
 
 if __name__ == '__main__':
     app.run(debug=True)

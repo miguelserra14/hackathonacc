@@ -1,0 +1,10 @@
+{
+  "summary_text": "Please provide the emails you want me to summarize and prioritize. I need the email text to complete your request.",
+  "stats": {
+    "total_emails": 0,
+    "high_priority": 0,
+    "medium_priority": 0,
+    "low_priority": 0,
+    "irrelevant": 0
+  }
+}

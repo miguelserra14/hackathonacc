@@ -59,7 +59,7 @@ def fetch_emails(date_from, date_to, output_file=None):
     if output_file:
         with open(output_file, "w", encoding="utf-8") as f:
             for item in emails:
-                f.write(f"Subject: {item['subject']}\nBody: {email['body']}\n{'-'*40}\n")
+                f.write(f"Subject: {item['subject']}\nBody: {item['body']}\n{'-'*40}\n")
 
     return emails
 

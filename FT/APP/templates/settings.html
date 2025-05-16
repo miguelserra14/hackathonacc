@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Settings - ResuMail</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            color: #212529;
+        }
+
+        .container {
+            max-width: 720px;
+        }
+
+        .btn-purple {
+            background-color: #7a5af8;
+            border-color: #7a5af8;
+            color: white;
+        }
+
+        .btn-purple:hover {
+            background-color: #684de0;
+            border-color: #684de0;
+        }
+
+        /* Dark mode */
+        body.dark-mode {
+            background-color: #121212;
+            color: #e0e0e0;
+        }
+
+        body.dark-mode .form-control,
+        body.dark-mode .form-select,
+        body.dark-mode .btn {
+            background-color: #2a2a2a;
+            color: #f1f1f1;
+            border-color: #444;
+        }
+
+        body.dark-mode .btn:hover {
+            background-color: #3c3c3c;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container py-5">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h2 class="fw-bold mb-0">⚙️ Settings</h2>
+            <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" id="themeToggle">
+                <label class="form-check-label small" for="themeToggle">🌙 Dark</label>
+            </div>
+        </div>
+        <p class="text-muted mb-4">Customize your ResuMail experience.</p>
+
+        {% if get_flashed_messages() %}
+        <div class="alert alert-warning">
+            {% for message in get_flashed_messages() %}
+            {{ message }}
+            {% endfor %}
+        </div>
+        {% endif %}
+
+        <form method="POST" action="{{ url_for('settings') }}">
+            <div class="mb-4">
+                <label class="form-label">Email address to read from</label>
+                <input type="email" class="form-control" id="emailAccount" name="emailAccount"
+                    placeholder="your.email@example.com" value="{{ email_account }}" required>
+                <small class="form-text text-muted">Enter the email address you want to read and summarize emails
+                    from.</small>
+            </div>
+
+            <div class="mb-4">
+                <label class="form-label">Email password</label>
+                <input type="password" class="form-control" id="emailPassword" name="emailPassword"
+                    placeholder="••••••••" required>
+                <small class="form-text text-muted">For Gmail, use an App Password instead of your account
+                    password.</small>
+            </div>
+
+            <div class="mb-4">
+                <label class="form-label">Preferred summary language</label>
+                <select class="form-select" name="language">
+                    <option value="English" {% if language=='English' %}selected{% endif %}>English</option>
+                    <option value="Português" {% if language=='Português' %}selected{% endif %}>Português</option>
+                    <option value="Español" {% if language=='Español' %}selected{% endif %}>Español</option>
+                    <option value="Français" {% if language=='Français' %}selected{% endif %}>Français</option>
+                </select>
+            </div>
+
+            <div class="mb-4 form-check">
+                <input type="checkbox" class="form-check-input" id="autoSummarize" name="autoSummarize" {% if
+                    auto_summarize %}checked{% endif %}>
+                <label class="form-check-label" for="autoSummarize">Automatically summarize new emails daily</label>
+            </div>
+
+            <button type="submit" class="btn btn-purple">Save Changes</button>
+            <a href="{{ url_for('dashboard') }}" class="btn btn-outline-secondary ms-2">← Back to Dashboard</a>
+        </form>
+    </div>
+
+    <!-- Dark mode toggle script -->
+    <script>
+        const toggle = document.getElementById("themeToggle");
+        const body = document.body;
+
+        if (localStorage.getItem("theme") === "dark") {
+            body.classList.add("dark-mode");
+            toggle.checked = true;
+        }
+
+        toggle.addEventListener("change", () => {
+            if (toggle.checked) {
+                body.classList.add("dark-mode");
+                localStorage.setItem("theme", "dark");
+            } else {
+                body.classList.remove("dark-mode");
+                localStorage.setItem("theme", "light");
+            }
+        });
+    </script>
+</body>
+
+</html>

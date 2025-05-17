@@ -93,14 +93,19 @@ def summarize():
     deprioritize = ["newsletter", "spam", "phishing", "recruitment", "job opportunities", "external news", "lottery", "seo"]
 
     # Call the summarizer function
-    structured_summary = summarize_emails(
-        emails,
-        prioritize_keywords=prioritize,
-        deprioritize_keywords=deprioritize
-    )
+    try:
+        structured_summary = summarize_emails(
+            emails,
+            prioritize_keywords=prioritize,
+            deprioritize_keywords=deprioritize
+        )
+        print("Structured Summary:", structured_summary)  # Debugging log
+    except Exception as e:
+        flash(f"Error during summarization: {e}", "danger")
+        return redirect(url_for('dashboard'))
 
-    if not structured_summary:
-        flash("Failed to generate summary.", "danger")
+    if not isinstance(structured_summary, dict):
+        flash("Failed to generate a valid summary structure.", "danger")
         return redirect(url_for('dashboard'))
 
     # Save the summary to a file

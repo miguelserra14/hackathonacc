@@ -2,7 +2,6 @@ import google.generativeai as genai
 import os
 from dotenv import load_dotenv
 import re
-import json
 
 load_dotenv()
 api_key = os.getenv("GEMINI_API_KEY")
@@ -64,7 +63,7 @@ def build_prompt(
     emails,
     prioritize_keywords=None,
     deprioritize_keywords=None,
-    more_relevant_conversations=None,
+    more_relevant_conversations="andre.simoes.soares.04@gmail.com",
     less_relevant_conversations=None
 ):
     prompt = (
@@ -75,11 +74,11 @@ def build_prompt(
         "external security updates or newsletters, job proposals, training reminders, or support ticket updates that did not provide information about the projects."
     )
     if prioritize_keywords:
-        prompt += f"\nPrioritize the following topics/keywords: {', '.join(prioritize_keywords)}, even if the body is brief or lacks detail. Prioritize subjects written in caps lock."
+        prompt += f"\nPrioritize the following topics/keywords: {', '.join(prioritize_keywords)}, even if the body is brief or lacks detail. Prioritize subjects that are written in caps lock."
     if deprioritize_keywords:
         prompt += f"\nDeprioritize the following topics/keywords: {', '.join(deprioritize_keywords)}."
     if more_relevant_conversations:
-        prompt += f"\nConsider these conversations as more relevant: {', '.join(more_relevant_conversations)}."
+        prompt += f"\nConsider these senders as more relevant and of high priority: {', '.join(more_relevant_conversations)}."
     if less_relevant_conversations:
         prompt += f"\nConsider these conversations as less relevant: {', '.join(less_relevant_conversations)}."
     prompt += "\n\nEmails:\n"
@@ -128,12 +127,6 @@ def summarize_emails(
     more_relevant_conversations=None,
     less_relevant_conversations=None
 ):
-    print("Emails received for summarization:")
-    for email in emails:
-        print(email)
-    print("Prioritize keywords:", prioritize_keywords)
-    print("Deprioritize keywords:", deprioritize_keywords)
-    
     prompt = build_prompt(
         emails,
         prioritize_keywords,
@@ -144,43 +137,13 @@ def summarize_emails(
     try:
         model = genai.GenerativeModel('models/gemini-1.5-flash-latest')
         response = model.generate_content(prompt)
-        summary_text = response.text.strip()
-
-        # Parse the summary into a structured dictionary
-        structured_summary = {
-            "high_priority": [],
-            "medium_priority": [],
-            "low_priority": [],
-            "irrelevant_emails": [],
-            "stats": {
-                "total_emails": len(emails),
-                "high_priority": 0,
-                "medium_priority": 0,
-                "low_priority": 0,
-                "irrelevant": 0
-            }
-        }
-
-        # Example parsing logic (adjust based on actual summary format)
-        lines = summary_text.split("\n")
-        for line in lines:
-            if line.startswith("High Priority:"):
-                structured_summary["high_priority"].append(line.replace("High Priority:", "").strip())
-                structured_summary["stats"]["high_priority"] += 1
-            elif line.startswith("Medium Priority:"):
-                structured_summary["medium_priority"].append(line.replace("Medium Priority:", "").strip())
-                structured_summary["stats"]["medium_priority"] += 1
-            elif line.startswith("Low Priority:"):
-                structured_summary["low_priority"].append(line.replace("Low Priority:", "").strip())
-                structured_summary["stats"]["low_priority"] += 1
-            elif line.startswith("Irrelevant:"):
-                structured_summary["irrelevant_emails"].append(line.replace("Irrelevant:", "").strip())
-                structured_summary["stats"]["irrelevant"] += 1
-
-        return structured_summary
+        summary = response.text.strip()
+       
+        return summary
     except Exception as e:
         print(f"Error summarizing: {e}")
         return None
+
 
 
 

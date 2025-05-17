@@ -1,13 +1,1 @@
-{
-  "high_priority": [],
-  "medium_priority": [],
-  "low_priority": [],
-  "irrelevant_emails": [],
-  "stats": {
-    "total_emails": 76,
-    "high_priority": 0,
-    "medium_priority": 0,
-    "low_priority": 0,
-    "irrelevant": 0
-  }
-}
+"Please provide the emails you want me to summarize and prioritize.  I need the email text to complete your request."
